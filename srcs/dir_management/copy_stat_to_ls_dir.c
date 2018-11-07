@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse_ls.c                                      :+:      :+:    :+:   */
+/*   copy_stat_to_ls_dir.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 14:39:15 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 20:56:14 by abiestro         ###   ########.fr       */
+/*   Created: 2018/11/07 18:24:22 by abiestro          #+#    #+#             */
+/*   Updated: 2018/11/07 18:45:50 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 #include "ft_ls.h"
 
-t_ls    *ft_parse_ls(int ac, char **av, t_ls *ls)
+int     ft_copy_stat_info_to_ls_dir(t_ls_dir *element, struct stat *info)
 {
-
-    // ft_parse_option(ls, ac, av);
-    ft_ls_parse_arguments(ls, ac, av);
-    (void)av;
-    return(ls);
+    ft_memcpy(&element->stats, info, sizeof(struct stat));
+    return (1);
 }

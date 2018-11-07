@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse_ls.c                                      :+:      :+:    :+:   */
+/*   ft_parse_options.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 14:39:15 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 20:56:14 by abiestro         ###   ########.fr       */
+/*   Created: 2018/11/07 20:29:44 by abiestro          #+#    #+#             */
+/*   Updated: 2018/11/07 20:56:04 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-t_ls    *ft_parse_ls(int ac, char **av, t_ls *ls)
+int ft_parse_option(t_ls *ls, int ac, char **av)
 {
-
-    // ft_parse_option(ls, ac, av);
-    ft_ls_parse_arguments(ls, ac, av);
-    (void)av;
-    return(ls);
+    int i;
+    (void)ls;
+    i = 1;
+    while (i < ac && *av[i] == '-')
+    {
+        if (ft_add_option(ls, av[i]))
+            return (0);
+        i++;
+    }
+    return (1);
 }

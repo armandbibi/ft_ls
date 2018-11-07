@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse_ls.c                                      :+:      :+:    :+:   */
+/*   ft_read_and_save_dir.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 14:39:15 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 20:56:14 by abiestro         ###   ########.fr       */
+/*   Created: 2018/11/07 19:03:57 by abiestro          #+#    #+#             */
+/*   Updated: 2018/11/07 19:13:44 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-t_ls    *ft_parse_ls(int ac, char **av, t_ls *ls)
-{
+#include <sys/types.h>
 
-    // ft_parse_option(ls, ac, av);
-    ft_ls_parse_arguments(ls, ac, av);
-    (void)av;
-    return(ls);
+
+#include <dirent.h>
+
+int     ft_read_and_save_dir(t_ls *ls, t_ls_dir *current_dir)
+{
+    DIR *dir;
+    struct dirent *i;
+    (void) ls;
+
+    dir = opendir(current_dir->name);
+    while ((i = readdir(dir)))
+    {
+        ft_printf("%s", i);
+    }
+    return (1);
 }
