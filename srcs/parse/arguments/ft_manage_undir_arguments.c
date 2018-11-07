@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_manage_undir_arguments.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/22 17:30:50 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 14:26:55 by abiestro         ###   ########.fr       */
+/*   Created: 2018/11/07 15:48:14 by abiestro          #+#    #+#             */
+/*   Updated: 2018/11/07 16:51:32 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
 #include "ft_ls.h"
-#include <dirent.h>
+#include <errno.h>
 
-int     main(int ac, char **av)
+int ft_ls_manage_not_dir(t_ls *ls ,char *str)
 {
-	
-    (void) ac;
-    (void) av;
-    ft_ls(ac, av);
-    return (0);
+    int error;
+    t_ls_dir *element;
+
+    error = errno;
+    element = ft_new_ls_dir(str, 0);
+        if (!element)
+            return (0);
+    if (error == ENOENT)
+        ft_add_dir_to_chain(ls, ls->bad_arguments, element);
+    return (1);
 }

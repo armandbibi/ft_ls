@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_malloc_ls.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/22 17:30:50 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 14:26:55 by abiestro         ###   ########.fr       */
+/*   Created: 2018/11/07 16:14:36 by abiestro          #+#    #+#             */
+/*   Updated: 2018/11/07 16:45:59 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
 #include "ft_ls.h"
-#include <dirent.h>
 
-int     main(int ac, char **av)
+t_ls    *malloc_ls(void)
 {
-	
-    (void) ac;
-    (void) av;
-    ft_ls(ac, av);
-    return (0);
+    t_ls *new_ls;
+
+    new_ls = malloc(sizeof(t_ls));
+    if (!new_ls)
+        return (NULL);
+    new_ls->dir_lst = NULL;
+    new_ls->files_lst = NULL;
+    new_ls->bad_arguments = NULL;
+    return (new_ls);
 }
