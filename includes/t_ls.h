@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:40:15 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 21:04:14 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/07 21:41:45 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # define LS_FILE           3
 
 # define DISPLAY_OPTION     "l1"
+# define SORTING_OPTION     "uU"
 
 #include <sys/types.h>
 #include <sys/stat.h>

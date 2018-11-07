@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:15:42 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 20:22:08 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/07 21:27:42 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void ft_proto_iteration(t_ls_dir *element)
     struct dirent *i;
 
     dir = opendir(element->name);
-    while ((i = readdir(dir)))
+    while (dir && (i = readdir(dir)))
     {
         ft_printf("%s ", i->d_name);
     }

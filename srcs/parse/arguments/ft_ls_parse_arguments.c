@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:22:08 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 20:42:23 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/07 21:25:51 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_ls  *ft_ls_parse_arguments(t_ls *ls, int ac, char **av)
     {
         returned = lstat(av[i], &info);
         element = ft_new_ls_dir(av[i], 0);
-        if (returned == -1)
+        if (returned)
             ft_add_dir_to_chain(ls, ls->bad_arguments, element, BAD_ELEMENT);
         else if (!(S_ISDIR(info.st_mode)))
         {
