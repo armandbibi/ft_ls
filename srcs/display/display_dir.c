@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:15:42 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/09 19:16:46 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/09 19:56:21 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ static void ft_proto_iteration(t_ls *ls, t_ls_dir *element)
     kid = NULL;
     ft_strcpy(buff, element->name);
     dir = opendir(element->name);
-    while (dir && (i = readdir(dir)))
+    if (lstat(element->name, &info) == -1)
+        ft_printf("ft_ls : %s : %s\n",element->name, strerror(errno));
+    else while (dir && (i = readdir(dir)))
     {
         if (ls->display_option[0])
         {
@@ -49,15 +51,20 @@ static void ft_proto_iteration(t_ls *ls, t_ls_dir *element)
 
 void        ft_display_dir(t_ls *ls, t_ls_dir *chain)
 {
-  /*   if (ls->display_option[0])
-        ls->display_option[0](chain);
-    else*/ while (chain)
+    struct stat info;
+    
+    while (chain)
     {
-        if (ls->display_option[0])
-            ls->display_option[0](chain);
+        if (lstat(chain->name, &info) == -1)
+            ft_printf("ft_ls : %s : %s\n", chain->name, strerror(errno));
         else
-            ft_printf("\n\n%s:\n", chain->name);
-        ft_proto_iteration(ls, chain);
+        {
+            if (ls->display_option[0])
+                ls->display_option[0](chain);
+            else
+                ft_printf("\n\n%s:\n", chain->name);
+            ft_proto_iteration(ls, chain);
+        }
         chain = chain->next;
     }
 }
