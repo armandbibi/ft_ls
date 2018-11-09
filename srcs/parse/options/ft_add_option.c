@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 20:47:47 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 21:54:03 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/09 16:52:53 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,9 @@ int     ft_add_option(t_ls *ls, char *str)
         {
             if (*str == DISPLAY_OPTION[i])
             {
-                ft_printf("display : %c\n", *str);
+                ft_set_display_option(ls, *str);
                 booli = 1;
             }
-                // ft_set_display_option(ls, *str);
             i++;
         }
         i = 0;
@@ -44,9 +43,12 @@ int     ft_add_option(t_ls *ls, char *str)
             i++;
         }
         if (!booli)
-            ft_printf("invalide option");
+        {
+            ft_printf("ft_ls : invalid option : %c \n", *str);
+            return (0);
+        }
         i = 0;
         str++;
     }
-    return 21;
+    return (1);
 }

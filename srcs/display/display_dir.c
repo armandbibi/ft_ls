@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:15:42 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 21:27:42 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/09 16:49:01 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ static void ft_proto_iteration(t_ls_dir *element)
     }
 }
 
-void        ft_display_dir(t_ls_dir *chain)
+void        ft_display_dir(t_ls *ls, t_ls_dir *chain)
 {
-    while (chain)
+     if (ls->display_option[0])
+        ls->display_option[0](chain);
+    else while (chain)
     {
         ft_printf("\n\n%s:\n", chain->name);
         ft_proto_iteration(chain);

@@ -59,6 +59,7 @@ SRCS			+=	$(DIR_PARSE)ft_parse_ls.c \
 					$(DIR_PARSE_ARGS)ft_manage_undir_arguments.c \
 					$(DIR_PARSE_OPTS)ft_parse_options.c \
 					$(DIR_PARSE_OPTS)ft_add_option.c \
+					$(DIR_PARSE_OPTS)set_display_options.c
 					
 # MALLOCS
 
@@ -69,13 +70,15 @@ SRCS			+=	$(DIR_MANAGE)/ft_malloc_ls.c \
 
 SRCS			+=	$(DIR_MANAGE)/add_dir_to_chain.c \
 					$(DIR_MANAGE)/copy_stat_to_ls_dir.c \
-					$(DIR_MANAGE)/ft_read_and_save_dir.c
+					$(DIR_MANAGE)/ft_read_and_save_dir.c \
 
 # DISPLAY
 
 SRCS			+=	$(DIR_DISPLAY)display_bad_arguments.c\
 					$(DIR_DISPLAY)display_files.c\
 					$(DIR_DISPLAY)display_dir.c \
+					$(DIR_DISPLAY)display_l.c \
+
 # OBJECTS
 
 OBJS			:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
@@ -100,9 +103,11 @@ $(LIB_DIR): $(LIBFT_A) $(PRINTF_A)
 
 $(LIBFT_A):
 	@$(MK) $(LIB_FT_DIR)
+	@echo "$(LOG_GREEN)LIBFT.A IS READY$(LOG_NOCOLOR)"
 
 $(PRINTF_A):
 	@$(MK) $(LIB_PF_DIR)
+	@echo "$(LOG_GREEN)FT_PRINTF.A IS READY$(LOG_NOCOLOR)"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c 
 	@$(MD) $(OBJ_DIR)

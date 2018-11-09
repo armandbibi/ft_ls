@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse_options.c                                 :+:      :+:    :+:   */
+/*   set_display_options.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 20:29:44 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/09 14:53:37 by abiestro         ###   ########.fr       */
+/*   Created: 2018/11/09 14:58:31 by abiestro          #+#    #+#             */
+/*   Updated: 2018/11/09 16:52:28 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-int ft_parse_option(t_ls *ls, int ac, char **av)
+void    ft_set_display_option(t_ls *ls, char option)
 {
     int i;
-    (void)ls;
-    i = 1;
-    while (i < ac && *av[i] == '-')
+    void        (*op)(t_ls_dir *);
+    
+    i = 0;
+    if (option == 'l')
     {
-        if (!ft_add_option(ls, av[i]))
-            return (0);
-        i++;
+        op = &display_l;
     }
-    return (1);
+    while (i < 4 && ls->display_option[i])
+        i++;
+    ls->display_option[0] = op;
 }

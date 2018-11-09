@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:40:15 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 21:41:45 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/09 15:53:37 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ struct             s_ls
     t_ls_dir        *dir_lst;
     t_ls_dir        *files_lst;
     t_ls_dir        *bad_arguments;
+    void            (*display_option[4])(t_ls_dir *);
+    t_ls_dir        (*sorting_option[4])(t_ls_dir *);
 };
 
 #endif
