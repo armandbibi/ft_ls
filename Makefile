@@ -56,7 +56,6 @@ SRCS			+=	ft_ls.c
 
 SRCS			+=	$(DIR_PARSE)ft_parse_ls.c \
 					$(DIR_PARSE_ARGS)ft_ls_parse_arguments.c \
-					$(DIR_PARSE_ARGS)ft_manage_undir_arguments.c \
 					$(DIR_PARSE_OPTS)ft_parse_options.c \
 					$(DIR_PARSE_OPTS)ft_add_option.c \
 					$(DIR_PARSE_OPTS)set_display_options.c
