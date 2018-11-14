@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:22:08 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 21:25:51 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/14 19:52:52 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,25 @@ t_ls  *ft_ls_parse_arguments(t_ls *ls, int ac, char **av)
         returned = lstat(av[i], &info);
         element = ft_new_ls_dir(av[i], 0);
         if (returned)
-            ft_add_dir_to_chain(ls, ls->bad_arguments, element, BAD_ELEMENT);
+        {
+            element->valid = 0;
+            element->type = BAD_ELEMENT;
+            // ft_add_dir_to_chain(ls, ls->bad_arguments, element, BAD_ELEMENT);
+            ft_insert_inchain_list(&ls->elements, element, test_fn);
+        }
         else if (!(S_ISDIR(info.st_mode)))
         {
+            element->type = LS_DIR;
+            element->valid = 1;
             ft_copy_stat_info_to_ls_dir(element, &info);
-            ft_add_dir_to_chain(ls, ls->files_lst, element, LS_FILE);
+            ft_insert_inchain_list(&ls->elements, element, test_fn);
+            // ft_add_dir_to_chain(ls, ls->files_lst, element, LS_FILE);
         }
         else
         {
+            element->type = LS_FILE;
             ft_copy_stat_info_to_ls_dir(element, &info);
-            ft_add_dir_to_chain(ls, ls->dir_lst, element, LS_DIR);
+            ft_insert_inchain_list(&ls->elements, element, test_fn);            
         }
         i++;
     }

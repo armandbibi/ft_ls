@@ -42,8 +42,7 @@ DIR_PARSE_ARGS	:= parse/arguments/
 DIR_PARSE_OPTS	:= parse/options/
 DIR_MANAGE		:= dir_management
 DIR_DISPLAY		:= display/
-
-# INCLUDES
+DIR_SORT		:= sorts/
 
 # SRCS FOR RUNNING PROJECT CONFORM TO CORRECTION
 SRCS			+=	main.c
@@ -78,6 +77,9 @@ SRCS			+=	$(DIR_DISPLAY)display_bad_arguments.c\
 					$(DIR_DISPLAY)display_dir.c \
 					$(DIR_DISPLAY)display_l.c \
 
+# SORTING
+
+SRCS			+= $(DIR_SORT)ft_insert_inchain_list.c\
 # OBJECTS
 
 OBJS			:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
@@ -95,7 +97,7 @@ all: $(LIB_DIR) $(NAME)
 
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(PRINTF) $(INCLUDE)
+	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(PRINTF) $(INCLUDE)
 	@echo "$(LOG_GREEN)FT_LS has been created successfully !$(LOG_NOCOLOR)"
 
 $(LIB_DIR): $(LIBFT_A) $(PRINTF_A)
@@ -115,6 +117,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@$(MD) $(OBJ_DIR)/$(DIR_DISPLAY)
 	@$(MD) $(OBJ_DIR)/$(DIR_PARSE_ARGS)
 	@$(MD) $(OBJ_DIR)/$(DIR_PARSE_OPTS)
+	@$(MD) $(OBJ_DIR)/$(DIR_SORT)
 	@$(CC) $(CFLAGS) -o $@ -c $< $(INCLUDE)
 
 clean:
