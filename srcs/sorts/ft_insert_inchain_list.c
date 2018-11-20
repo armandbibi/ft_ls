@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 18:16:16 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/14 20:00:16 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/20 13:34:22 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 int test_fn(t_ls_dir *a, t_ls_dir *b)
 {
+    int i;
+
+    i = 0;
     if ((a->type - b->type))
         return (a->type - b->type);
-    else if (*a->name - *b->name)
-        return (*a->name - *b->name);
-    else
-        return (0);
+    while (a->name[i] && b->name[i] && a->name[i] == b->name[i])
+        i++;    
+    return (*a->name - *b->name);
 }
 
 void    ft_insert_inchain_list(t_ls_dir **chain, t_ls_dir *element, int (*compare)(t_ls_dir*, t_ls_dir*))

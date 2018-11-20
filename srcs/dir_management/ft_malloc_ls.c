@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 16:14:36 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 17:17:40 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/20 13:40:15 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ t_ls    *malloc_ls(void)
     new_ls->dir_lst = NULL;
     new_ls->files_lst = NULL;
     new_ls->bad_arguments = NULL;
+    new_ls->option = 0;
     return (new_ls);
 }
