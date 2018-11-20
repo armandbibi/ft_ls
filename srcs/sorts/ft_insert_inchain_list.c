@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 18:16:16 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/20 13:34:22 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/20 13:49:16 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ int test_fn(t_ls_dir *a, t_ls_dir *b)
     i = 0;
     if ((a->type - b->type))
         return (a->type - b->type);
+    if (!a->name || !b->name)
+    {
+        ft_printf("aaaaaaaa\n");
+    }
     while (a->name[i] && b->name[i] && a->name[i] == b->name[i])
         i++;    
     return (*a->name - *b->name);
