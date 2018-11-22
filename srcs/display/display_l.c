@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:25:23 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/09 18:46:24 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/20 15:12:10 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,12 +73,12 @@ void    display_l(t_ls_dir *element)
     if (!element)
     return;
     ft_format_time(&element->stats.st_mtimespec, time);
-        ft_printf("%0.7d %3d %12s %12s %5u %s %s\n",
-        element->stats.st_mode,
-        element->stats.st_nlink,
-        getpwuid(element->stats.st_uid)->pw_name,
-        getgrgid(element->stats.st_gid)->gr_name,
-        element->stats.st_size,
-        time,
-        element->name);
+    ft_printf("%0.7d %3d %12s %12s %5u %s %s\n",
+    element->stats.st_mode,
+    element->stats.st_nlink,
+    getpwuid(element->stats.st_uid)->pw_name,
+    getgrgid(element->stats.st_gid)->gr_name,
+    element->stats.st_size,
+    time,
+    element->name);
 }
