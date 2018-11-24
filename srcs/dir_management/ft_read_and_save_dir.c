@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:03:57 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/22 19:03:57 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 17:35:41 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int     ft_read_and_save_dir(t_ls *ls, t_ls_dir *current_dir)
     struct stat     info;
     int             returned;
     t_ls_dir        *new;
+    char            *new_str;
 
     dir = opendir(current_dir->name);
     if (!dir)
@@ -48,13 +49,11 @@ int     ft_read_and_save_dir(t_ls *ls, t_ls_dir *current_dir)
     {
         if (ft_strequ(i->d_name,".") || ft_strequ(i->d_name,"..") || ft_strstr(i->d_name, "/.") || *i->d_name == '.')
             continue;
-        if (!ft_add_pass_to_name(NULL, current_dir->name, i->d_name))
-        {
-            closedir(dir);
-            return(1);
-        }
-        returned = lstat(ft_add_pass_to_name(NULL, current_dir->name, i->d_name), &info);
-        new = ft_new_ls_dir(ft_add_pass_to_name(NULL, current_dir->name, i->d_name), 0);
+        new_str = ft_add_pass_to_name(NULL, current_dir->name, i->d_name); 
+        if (!new_str)
+            continue;
+        returned = lstat((new_str), &info);
+        new = ft_new_ls_dir(new_str, 0);
         ft_copy_stat_info_to_ls_dir(new, &info);
         new->level = current_dir->level + 1;
         if (returned)
@@ -64,19 +63,13 @@ int     ft_read_and_save_dir(t_ls *ls, t_ls_dir *current_dir)
         if (ls->option & OPTION_l)
             display_l(new);
         else
-           ft_printf("%s ", i->d_name);
+            ft_printf("%s ", i->d_name);
         if (returned)
         {
             new->valid = 0;
             new->type = BAD_ELEMENT;
             ft_insert_inchain_list(&ls->elements, new, test_fn);
         }
-        // else if (!(S_ISDIR(info.st_mode)))
-        // {
-        //     new->type = LS_FILE;
-        //     new->valid = 1;
-        //     ft_insert_inchain_list(&ls->elements, new, test_fn);
-        // }
         else
         {
             new->type = LS_DIR;

@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:40:15 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/22 18:01:16 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 17:43:06 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ struct             s_ls
 };
 
 
-int     ft_read_and_save_dir(t_ls *ls, t_ls_dir *current_dir);
-t_ls_dir        *ft_handler(t_ls *ls, t_ls_dir *element);
+int                 ft_read_and_save_dir(t_ls *ls, t_ls_dir *current_dir);
+t_ls_dir            *ft_handler(t_ls *ls, t_ls_dir *element);
 
 #endif

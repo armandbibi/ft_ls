@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 20:47:47 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/22 17:36:03 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 18:40:11 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,35 @@
 
 int     option_is_valid(t_ls *ls, char option)
 {
-    if (option == 'R')
-        ls->option |= OPTION_R;
-    else if (option == 'l')
-        ls->option |= OPTION_l;
-    else if (option == 'a')
-        ls->option |= OPTION_a;
-    else if (option == 'r')
-        ls->option |= OPTION_r;
-    else if (option == 't')
-        ls->option |= OPTION_t;
-    else
-        return (0);
-
-    printf("%x\n\n", ls->option);
-    return (1);
+	if (option == 'R')
+		ls->option |= OPTION_R;
+	else if (option == 'l')
+		ls->option |= OPTION_l;
+	else if (option == 'a')
+		ls->option |= OPTION_a;
+	else if (option == 'r')
+		ls->option |= OPTION_r;
+	else if (option == 't')
+		ls->option |= OPTION_t;
+	else
+		return (0);
+	return (1);
 }
 
 int     ft_add_option(t_ls *ls, char *str)
 {
-    int i;
+	int i;
 
-    i = 0;
-    str++;
-    while (*str)
-    {
-        if (!option_is_valid(ls, *str))
-        {
-            ft_printf("invalide option : '%c' in\n");
-            return (0);
-        }
-        str++;
-    }
-    return (1);
+	i = 0;
+	str++;
+	while (*str)
+	{
+		if (!option_is_valid(ls, *str))
+		{
+			ft_printf("invalide option : '%c' in\n");
+			return (0);
+		}
+		str++;
+	}
+	return (1);
 }

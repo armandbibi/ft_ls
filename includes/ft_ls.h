@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:24:06 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/14 19:26:41 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 17:46:36 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void        ft_display_files(t_ls *ls, t_ls_dir *chain);
 void        ft_display_dir(t_ls *ls, t_ls_dir *chain);
 
 /*
-** display options
+** display optionsa
 */
 
 void    display_l(t_ls_dir *element);
@@ -72,5 +72,12 @@ void    display_l(t_ls_dir *element);
 
 int test_fn(t_ls_dir *a, t_ls_dir *b);
 
+/*
+** free
+*/
+
+
+void       ft_del_ls_dir(t_ls_dir **del);
+void    ft_del_ls(t_ls *ls);    
 
 #endif

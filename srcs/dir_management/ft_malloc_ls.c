@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 16:14:36 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/22 18:01:41 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 17:38:35 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@ t_ls    *malloc_ls(void)
     new_ls = malloc(sizeof(t_ls));
     if (!new_ls)
         return (NULL);
-    new_ls->dir_lst = NULL;
-    new_ls->files_lst = NULL;
-    new_ls->bad_arguments = NULL;
     new_ls->elements = NULL;
     new_ls->option = 0;
     new_ls->level = 0;
     return (new_ls);
+}
+void    ft_del_ls(t_ls *ls)
+{
+    free(ls);
 }

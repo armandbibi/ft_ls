@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 14:14:25 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/22 17:35:33 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 17:51:36 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ t_ls_dir        *ft_handler(t_ls *ls, t_ls_dir *element)
     }
     else if (element->type == LS_FILE)
         ft_display_files(ls, element);
+    ft_del_ls_dir(&element);
     return (element);
     
 }
