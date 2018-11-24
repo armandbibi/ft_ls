@@ -6,30 +6,28 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:12:27 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/24 17:02:56 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 20:35:57 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-static void ft_add_color(t_ls_dir *element)
+static void	ft_add_color(t_ls_dir *element)
 {
-    if(element->stats.st_mode & S_IXUSR)
-        ft_printf("\x1B[31m");
-
+	if (element->stats.st_mode & S_IXUSR)
+		ft_printf("\x1B[31m");
 }
 
-void        ft_display_files(t_ls *ls, t_ls_dir *chain)
+void		ft_display_files(t_ls *ls, t_ls_dir *chain)
 {
-    (void) ls;
-
-    if (*chain->name == '.')
-        return;
-    ft_add_color(chain);
-    if (ls->option & OPTION_l)
-        display_l(chain);
-    else
-     ft_printf("%s", chain->name);
-        ft_printf("\033[0m ");
-    ft_printf("\n");
+	(void)ls;
+	if (*chain->name == '.')
+		return ;
+	ft_add_color(chain);
+	if (ls->option & OPTION_l)
+		display_l(chain);
+	else
+		ft_printf("%s", chain->name);
+	ft_printf("\033[0m ");
+	ft_printf("\n");
 }

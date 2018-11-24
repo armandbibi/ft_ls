@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 18:16:16 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/24 18:38:32 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 18:43:52 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		test_fn(t_ls_dir *a, t_ls_dir *b)
 	if (a->stats.st_mtimespec.tv_sec < b->stats.st_mtimespec.tv_sec)
 		return (0);
 	while (a->name[i] && b->name[i] && a->name[i] == b->name[i])
-		i++;    
+		i++;
 	return (a->name[i] - b->name[i]);
 }
 
@@ -40,13 +40,13 @@ void	ft_insert_inchain_list(t_ls_dir **chain, t_ls_dir *element,
 	if (!chain || !i)
 	{
 		*chain = element;
-		return;
+		return ;
 	}
 	else if (!(compare(*chain, element)))
 	{
 		element->next = *chain;
 		*chain = element;
-		return;    
+		return ;
 	}
 	while (i->next && compare(i->next, element))
 		i = i->next;

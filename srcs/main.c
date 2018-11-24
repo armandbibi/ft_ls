@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:30:50 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/07 14:26:55 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 20:38:03 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 #include "ft_ls.h"
 #include <dirent.h>
 
-int     main(int ac, char **av)
+int		main(int ac, char **av)
 {
-	
-    (void) ac;
-    (void) av;
-    ft_ls(ac, av);
-    return (0);
+	ft_ls(ac, av);
+	return (0);
 }

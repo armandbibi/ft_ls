@@ -1,0 +1,903 @@
+total 96
+-rw-r--r--  1 abiestro  2018_paris   3144 Nov 24 18:56 Makefile
+-rw-r--r--  1 abiestro  2018_paris      9 Nov 24 18:18 auteur
+-rwxr-xr-x  1 abiestro  2018_paris  37400 Nov 24 18:58 ft_ls
+drwxr-xr-x  4 abiestro  2018_paris    136 Nov  7 14:40 includes
+drwxr-xr-x  4 abiestro  2018_paris    136 Oct 22 19:25 libs
+drwxr-xr-x  8 abiestro  2018_paris    272 Nov 24 18:57 objs
+drwxr-xr-x  8 abiestro  2018_paris    272 Nov 14 18:15 srcs
+-rw-r--r--  1 abiestro  2018_paris      0 Nov 24 19:00 test
+
+.//includes:
+total 16
+-rw-r--r--  1 abiestro  2018_paris  2243 Nov 24 17:46 ft_ls.h
+-rw-r--r--  1 abiestro  2018_paris  1877 Nov 24 17:43 t_ls.h
+
+.//libs:
+total 0
+drwxr-xr-x    8 abiestro  2018_paris   272 Nov 24 18:58 ft_printf
+drwxr-xr-x  132 abiestro  2018_paris  4488 Nov 24 18:58 libft
+
+.//libs/ft_printf:
+total 96
+-rw-r--r--   1 abiestro  2018_paris   1913 Nov  9 16:02 Makefile
+-rw-r--r--   1 abiestro  2018_paris      9 Oct 22 16:59 author
+drwxr-xr-x   3 abiestro  2018_paris    102 Oct 22 16:59 includes
+-rw-r--r--   1 abiestro  2018_paris  38480 Nov 24 18:58 libftprintf.a
+drwxr-xr-x  22 abiestro  2018_paris    748 Nov 24 18:58 objs
+drwxr-xr-x  22 abiestro  2018_paris    748 Nov 22 17:04 srcs
+
+.//libs/ft_printf/includes:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  3928 Oct 22 16:59 ft_printf.h
+
+.//libs/ft_printf/objs:
+total 160
+-rw-r--r--  1 abiestro  2018_paris   856 Nov 24 18:58 arg_char.o
+-rw-r--r--  1 abiestro  2018_paris   872 Nov 24 18:58 arg_hashtag.o
+-rw-r--r--  1 abiestro  2018_paris  2480 Nov 24 18:58 arg_hexa.o
+-rw-r--r--  1 abiestro  2018_paris  2460 Nov 24 18:58 arg_int.o
+-rw-r--r--  1 abiestro  2018_paris  2160 Nov 24 18:58 arg_octal.o
+-rw-r--r--  1 abiestro  2018_paris  2312 Nov 24 18:58 arg_pointeur.o
+-rw-r--r--  1 abiestro  2018_paris  1760 Nov 24 18:58 arg_string.o
+-rw-r--r--  1 abiestro  2018_paris  2156 Nov 24 18:58 arg_unsigned_int.o
+-rw-r--r--  1 abiestro  2018_paris  2304 Nov 24 18:58 arg_wchar.o
+-rw-r--r--  1 abiestro  2018_paris  2580 Nov 24 18:58 arg_wstring.o
+-rw-r--r--  1 abiestro  2018_paris   916 Nov 24 18:58 ft_atoi.o
+-rw-r--r--  1 abiestro  2018_paris   660 Nov 24 18:58 ft_bzero.o
+-rw-r--r--  1 abiestro  2018_paris  1536 Nov 24 18:58 ft_itoa.o
+-rw-r--r--  1 abiestro  2018_paris  3248 Nov 24 18:58 ft_printf.o
+-rw-r--r--  1 abiestro  2018_paris  1576 Nov 24 18:58 ft_setarg.o
+-rw-r--r--  1 abiestro  2018_paris   732 Nov 24 18:58 ft_strcpy.o
+-rw-r--r--  1 abiestro  2018_paris   660 Nov 24 18:58 ft_strlen.o
+-rw-r--r--  1 abiestro  2018_paris  3072 Nov 24 18:58 parse_struct.o
+-rw-r--r--  1 abiestro  2018_paris  1004 Nov 24 18:58 parse_struct2.o
+-rw-r--r--  1 abiestro  2018_paris  2840 Nov 24 18:58 utils_math.o
+
+.//libs/ft_printf/srcs:
+total 160
+-rw-r--r--  1 abiestro  2018_paris  1290 Oct 22 16:59 arg_char.c
+-rw-r--r--  1 abiestro  2018_paris  1322 Oct 22 16:59 arg_hashtag.c
+-rw-r--r--  1 abiestro  2018_paris  2988 Oct 22 16:59 arg_hexa.c
+-rw-r--r--  1 abiestro  2018_paris  2889 Oct 22 16:59 arg_int.c
+-rw-r--r--  1 abiestro  2018_paris  2590 Oct 22 16:59 arg_octal.c
+-rw-r--r--  1 abiestro  2018_paris  2682 Oct 22 16:59 arg_pointeur.c
+-rw-r--r--  1 abiestro  2018_paris  1983 Oct 22 16:59 arg_string.c
+-rw-r--r--  1 abiestro  2018_paris  2511 Oct 22 16:59 arg_unsigned_int.c
+-rw-r--r--  1 abiestro  2018_paris  2895 Oct 22 16:59 arg_wchar.c
+-rw-r--r--  1 abiestro  2018_paris  2876 Oct 22 16:59 arg_wstring.c
+-rw-r--r--  1 abiestro  2018_paris  1249 Oct 22 16:59 ft_atoi.c
+-rw-r--r--  1 abiestro  2018_paris  1014 Oct 22 16:59 ft_bzero.c
+-rw-r--r--  1 abiestro  2018_paris  1913 Oct 22 16:59 ft_itoa.c
+-rw-r--r--  1 abiestro  2018_paris  2975 Nov 20 14:05 ft_printf.c
+-rw-r--r--  1 abiestro  2018_paris  1942 Oct 22 16:59 ft_setarg.c
+-rw-r--r--  1 abiestro  2018_paris  1113 Nov 22 17:04 ft_strcpy.c
+-rw-r--r--  1 abiestro  2018_paris  1032 Oct 22 16:59 ft_strlen.c
+-rw-r--r--  1 abiestro  2018_paris  3872 Oct 22 16:59 parse_struct.c
+-rw-r--r--  1 abiestro  2018_paris  1519 Oct 22 16:59 parse_struct2.c
+-rw-r--r--  1 abiestro  2018_paris  3703 Oct 22 16:59 utils_math.c
+
+.//libs/libft:
+total 1144
+-rw-r--r--  1 abiestro  2018_paris   2230 Nov  9 18:14 Makefile
+-rw-r--r--  1 abiestro  2018_paris      9 Oct 22 17:05 auteur
+-rw-r--r--  1 abiestro  2018_paris   1233 Oct 22 17:05 ft_atoi.c
+-rw-r--r--  1 abiestro  2018_paris    916 Nov 24 18:58 ft_atoi.o
+-rw-r--r--  1 abiestro  2018_paris   1870 Oct 22 17:05 ft_atoi_base.c
+-rw-r--r--  1 abiestro  2018_paris   1556 Nov 24 18:58 ft_atoi_base.o
+-rw-r--r--  1 abiestro  2018_paris    998 Oct 22 17:05 ft_bzero.c
+-rw-r--r--  1 abiestro  2018_paris    660 Nov 24 18:58 ft_bzero.o
+-rw-r--r--  1 abiestro  2018_paris   1137 Oct 22 17:05 ft_is_prime.c
+-rw-r--r--  1 abiestro  2018_paris    776 Nov 24 18:58 ft_is_prime.o
+-rw-r--r--  1 abiestro  2018_paris   1049 Oct 22 17:05 ft_isalnum.c
+-rw-r--r--  1 abiestro  2018_paris    696 Nov 24 18:58 ft_isalnum.o
+-rw-r--r--  1 abiestro  2018_paris   1020 Oct 22 17:05 ft_isalpha.c
+-rw-r--r--  1 abiestro  2018_paris    672 Nov 24 18:58 ft_isalpha.o
+-rw-r--r--  1 abiestro  2018_paris    969 Oct 22 17:05 ft_isascii.c
+-rw-r--r--  1 abiestro  2018_paris    648 Nov 24 18:58 ft_isascii.o
+-rw-r--r--  1 abiestro  2018_paris    999 Oct 22 17:05 ft_isdigit.c
+-rw-r--r--  1 abiestro  2018_paris    656 Nov 24 18:58 ft_isdigit.o
+-rw-r--r--  1 abiestro  2018_paris    981 Oct 22 17:05 ft_isprint.c
+-rw-r--r--  1 abiestro  2018_paris    656 Nov 24 18:58 ft_isprint.o
+-rw-r--r--  1 abiestro  2018_paris   1277 Nov  9 18:13 ft_itoa.c
+-rw-r--r--  1 abiestro  2018_paris    200 Nov  9 18:14 ft_itoa.o
+-rw-r--r--  1 abiestro  2018_paris    993 Oct 22 17:05 ft_lstadd.c
+-rw-r--r--  1 abiestro  2018_paris    636 Nov 24 18:58 ft_lstadd.o
+-rw-r--r--  1 abiestro  2018_paris   1150 Oct 22 17:05 ft_lstdel.c
+-rw-r--r--  1 abiestro  2018_paris    756 Nov 24 18:58 ft_lstdel.o
+-rw-r--r--  1 abiestro  2018_paris   1058 Oct 22 17:05 ft_lstdelone.c
+-rw-r--r--  1 abiestro  2018_paris    720 Nov 24 18:58 ft_lstdelone.o
+-rw-r--r--  1 abiestro  2018_paris   1018 Oct 22 17:05 ft_lstiter.c
+-rw-r--r--  1 abiestro  2018_paris    664 Nov 24 18:58 ft_lstiter.o
+-rw-r--r--  1 abiestro  2018_paris   1150 Oct 22 17:05 ft_lstmap.c
+-rw-r--r--  1 abiestro  2018_paris    748 Nov 24 18:58 ft_lstmap.o
+-rw-r--r--  1 abiestro  2018_paris   1356 Oct 22 17:05 ft_lstnew.c
+-rw-r--r--  1 abiestro  2018_paris    884 Nov 24 18:58 ft_lstnew.o
+-rw-r--r--  1 abiestro  2018_paris   1115 Oct 22 17:05 ft_memalloc.c
+-rw-r--r--  1 abiestro  2018_paris    760 Nov 24 18:58 ft_memalloc.o
+-rw-r--r--  1 abiestro  2018_paris   1116 Oct 22 17:05 ft_memccpy.c
+-rw-r--r--  1 abiestro  2018_paris    736 Nov 24 18:58 ft_memccpy.o
+-rw-r--r--  1 abiestro  2018_paris   1099 Oct 22 17:05 ft_memchr.c
+-rw-r--r--  1 abiestro  2018_paris    716 Nov 24 18:58 ft_memchr.o
+-rw-r--r--  1 abiestro  2018_paris   1137 Oct 22 17:05 ft_memcmp.c
+-rw-r--r--  1 abiestro  2018_paris    764 Nov 24 18:58 ft_memcmp.o
+-rw-r--r--  1 abiestro  2018_paris   1099 Oct 22 17:05 ft_memcpy.c
+-rw-r--r--  1 abiestro  2018_paris    692 Nov 24 18:58 ft_memcpy.o
+-rw-r--r--  1 abiestro  2018_paris    967 Oct 22 17:05 ft_memdel.c
+-rw-r--r--  1 abiestro  2018_paris    676 Nov 24 18:58 ft_memdel.o
+-rw-r--r--  1 abiestro  2018_paris   1196 Oct 22 17:05 ft_memmove.c
+-rw-r--r--  1 abiestro  2018_paris    816 Nov 24 18:58 ft_memmove.o
+-rw-r--r--  1 abiestro  2018_paris   1068 Oct 22 17:05 ft_memset.c
+-rw-r--r--  1 abiestro  2018_paris    676 Nov 24 18:58 ft_memset.o
+-rw-r--r--  1 abiestro  2018_paris    958 Oct 22 17:05 ft_putchar.c
+-rw-r--r--  1 abiestro  2018_paris    676 Nov 24 18:58 ft_putchar.o
+-rw-r--r--  1 abiestro  2018_paris    970 Oct 22 17:05 ft_putchar_fd.c
+-rw-r--r--  1 abiestro  2018_paris    688 Nov 24 18:58 ft_putchar_fd.o
+-rw-r--r--  1 abiestro  2018_paris    989 Oct 22 17:05 ft_putendl.c
+-rw-r--r--  1 abiestro  2018_paris    708 Nov 24 18:58 ft_putendl.o
+-rw-r--r--  1 abiestro  2018_paris   1017 Oct 22 17:05 ft_putendl_fd.c
+-rw-r--r--  1 abiestro  2018_paris    768 Nov 24 18:58 ft_putendl_fd.o
+-rw-r--r--  1 abiestro  2018_paris   1077 Oct 22 17:05 ft_putnbr.c
+-rw-r--r--  1 abiestro  2018_paris    784 Nov 24 18:58 ft_putnbr.o
+-rw-r--r--  1 abiestro  2018_paris   1636 Oct 22 17:05 ft_putnbr_base.c
+-rw-r--r--  1 abiestro  2018_paris   1348 Nov 24 18:58 ft_putnbr_base.o
+-rw-r--r--  1 abiestro  2018_paris   1109 Oct 22 17:05 ft_putnbr_fd.c
+-rw-r--r--  1 abiestro  2018_paris    808 Nov 24 18:58 ft_putnbr_fd.o
+-rw-r--r--  1 abiestro  2018_paris    978 Oct 22 17:05 ft_putstr.c
+-rw-r--r--  1 abiestro  2018_paris    696 Nov 24 18:58 ft_putstr.o
+-rw-r--r--  1 abiestro  2018_paris   1002 Oct 22 17:05 ft_putstr_fd.c
+-rw-r--r--  1 abiestro  2018_paris    712 Nov 24 18:58 ft_putstr_fd.o
+-rw-r--r--  1 abiestro  2018_paris   1135 Oct 22 17:05 ft_sort_integer_table.c
+-rw-r--r--  1 abiestro  2018_paris    784 Nov 24 18:58 ft_sort_integer_table.o
+-rw-r--r--  1 abiestro  2018_paris   1391 Oct 22 17:05 ft_sort_wordtab.c
+-rw-r--r--  1 abiestro  2018_paris   1204 Nov 24 18:58 ft_sort_wordtab.o
+-rw-r--r--  1 abiestro  2018_paris   1104 Oct 22 17:05 ft_strcat.c
+-rw-r--r--  1 abiestro  2018_paris    732 Nov 24 18:58 ft_strcat.o
+-rw-r--r--  1 abiestro  2018_paris   1099 Oct 22 17:05 ft_strchr.c
+-rw-r--r--  1 abiestro  2018_paris    764 Nov 24 18:58 ft_strchr.o
+-rw-r--r--  1 abiestro  2018_paris    990 Oct 22 17:05 ft_strclr.c
+-rw-r--r--  1 abiestro  2018_paris    652 Nov 24 18:58 ft_strclr.o
+-rw-r--r--  1 abiestro  2018_paris   1165 Oct 22 17:05 ft_strcmp.c
+-rw-r--r--  1 abiestro  2018_paris    748 Nov 24 18:58 ft_strcmp.o
+-rw-r--r--  1 abiestro  2018_paris   1060 Oct 22 17:05 ft_strcpy.c
+-rw-r--r--  1 abiestro  2018_paris    692 Nov 24 18:58 ft_strcpy.o
+-rw-r--r--  1 abiestro  2018_paris    964 Oct 22 17:05 ft_strdel.c
+-rw-r--r--  1 abiestro  2018_paris    676 Nov 24 18:58 ft_strdel.o
+-rw-r--r--  1 abiestro  2018_paris   1166 Oct 22 17:05 ft_strdup.c
+-rw-r--r--  1 abiestro  2018_paris    828 Nov 24 18:58 ft_strdup.o
+-rw-r--r--  1 abiestro  2018_paris   1075 Oct 22 17:05 ft_strequ.c
+-rw-r--r--  1 abiestro  2018_paris    756 Nov 24 18:58 ft_strequ.o
+-rw-r--r--  1 abiestro  2018_paris    985 Oct 22 17:05 ft_striter.c
+-rw-r--r--  1 abiestro  2018_paris    664 Nov 24 18:58 ft_striter.o
+-rw-r--r--  1 abiestro  2018_paris   1022 Oct 22 17:05 ft_striteri.c
+-rw-r--r--  1 abiestro  2018_paris    688 Nov 24 18:58 ft_striteri.o
+-rw-r--r--  1 abiestro  2018_paris   1193 Oct 22 17:05 ft_strjoin.c
+-rw-r--r--  1 abiestro  2018_paris    912 Nov 24 18:58 ft_strjoin.o
+-rw-r--r--  1 abiestro  2018_paris   1211 Oct 22 17:05 ft_strlcat.c
+-rw-r--r--  1 abiestro  2018_paris    920 Nov 24 18:58 ft_strlcat.o
+-rw-r--r--  1 abiestro  2018_paris   1016 Oct 22 17:05 ft_strlen.c
+-rw-r--r--  1 abiestro  2018_paris    660 Nov 24 18:58 ft_strlen.o
+-rw-r--r--  1 abiestro  2018_paris   1152 Oct 22 17:05 ft_strmap.c
+-rw-r--r--  1 abiestro  2018_paris    824 Nov 24 18:58 ft_strmap.o
+-rw-r--r--  1 abiestro  2018_paris   1189 Oct 22 17:05 ft_strmapi.c
+-rw-r--r--  1 abiestro  2018_paris    848 Nov 24 18:58 ft_strmapi.o
+-rw-r--r--  1 abiestro  2018_paris   1129 Oct 22 17:05 ft_strncat.c
+-rw-r--r--  1 abiestro  2018_paris    784 Nov 24 18:58 ft_strncat.o
+-rw-r--r--  1 abiestro  2018_paris   1183 Oct 22 17:05 ft_strncmp.c
+-rw-r--r--  1 abiestro  2018_paris    792 Nov 24 18:58 ft_strncmp.o
+-rw-r--r--  1 abiestro  2018_paris   1135 Oct 22 17:05 ft_strncpy.c
+-rw-r--r--  1 abiestro  2018_paris    784 Nov 24 18:58 ft_strncpy.o
+-rw-r--r--  1 abiestro  2018_paris   1125 Oct 22 17:05 ft_strnequ.c
+-rw-r--r--  1 abiestro  2018_paris    816 Nov 24 18:58 ft_strnequ.o
+-rw-r--r--  1 abiestro  2018_paris   1094 Oct 22 17:05 ft_strnew.c
+-rw-r--r--  1 abiestro  2018_paris    772 Nov 24 18:58 ft_strnew.o
+-rw-r--r--  1 abiestro  2018_paris   1344 Oct 22 17:05 ft_strnstr.c
+-rw-r--r--  1 abiestro  2018_paris    936 Nov 24 18:58 ft_strnstr.o
+-rw-r--r--  1 abiestro  2018_paris   1121 Oct 22 17:05 ft_strrchr.c
+-rw-r--r--  1 abiestro  2018_paris    728 Nov 24 18:58 ft_strrchr.o
+-rw-r--r--  1 abiestro  2018_paris   1791 Oct 22 17:05 ft_strsplit.c
+-rw-r--r--  1 abiestro  2018_paris   1836 Nov 24 18:58 ft_strsplit.o
+-rw-r--r--  1 abiestro  2018_paris   1240 Oct 22 17:05 ft_strstr.c
+-rw-r--r--  1 abiestro  2018_paris    788 Nov 24 18:58 ft_strstr.o
+-rw-r--r--  1 abiestro  2018_paris   1159 Oct 22 17:05 ft_strsub.c
+-rw-r--r--  1 abiestro  2018_paris    836 Nov 24 18:58 ft_strsub.o
+-rw-r--r--  1 abiestro  2018_paris   1341 Oct 22 17:05 ft_strtrim.c
+-rw-r--r--  1 abiestro  2018_paris   1116 Nov 24 18:58 ft_strtrim.o
+-rw-r--r--  1 abiestro  2018_paris    998 Oct 22 17:05 ft_tolower.c
+-rw-r--r--  1 abiestro  2018_paris    656 Nov 24 18:58 ft_tolower.o
+-rw-r--r--  1 abiestro  2018_paris    998 Oct 22 17:05 ft_toupper.c
+-rw-r--r--  1 abiestro  2018_paris    656 Nov 24 18:58 ft_toupper.o
+-rw-r--r--  1 abiestro  2018_paris  55968 Nov 24 18:58 libft.a
+-rw-r--r--  1 abiestro  2018_paris   4004 Oct 22 19:38 libft.h
+
+.//objs:
+total 16
+drwxr-xr-x  8 abiestro  2018_paris  272 Nov 24 18:57 dir_management
+drwxr-xr-x  6 abiestro  2018_paris  204 Nov 24 18:57 display
+-rw-r--r--  1 abiestro  2018_paris  904 Nov 24 18:57 ft_ls.o
+-rw-r--r--  1 abiestro  2018_paris  672 Nov 24 18:57 main.o
+drwxr-xr-x  5 abiestro  2018_paris  170 Nov 24 18:57 parse
+drwxr-xr-x  3 abiestro  2018_paris  102 Nov 24 18:57 sorts
+
+.//objs/dir_management:
+total 48
+-rw-r--r--  1 abiestro  2018_paris   760 Nov 24 18:57 add_dir_to_chain.o
+-rw-r--r--  1 abiestro  2018_paris   724 Nov 24 18:57 copy_stat_to_ls_dir.o
+-rw-r--r--  1 abiestro  2018_paris   912 Nov 24 18:57 ft_malloc_ls.o
+-rw-r--r--  1 abiestro  2018_paris  1104 Nov 24 18:57 ft_malloc_ls_dir.o
+-rw-r--r--  1 abiestro  2018_paris  2484 Nov 24 18:57 ft_read_and_save_dir.o
+-rw-r--r--  1 abiestro  2018_paris  1008 Nov 24 18:57 handler.o
+
+.//objs/display:
+total 32
+-rw-r--r--  1 abiestro  2018_paris   824 Nov 24 18:57 display_bad_arguments.o
+-rw-r--r--  1 abiestro  2018_paris  2316 Nov 24 18:57 display_dir.o
+-rw-r--r--  1 abiestro  2018_paris  1160 Nov 24 18:57 display_files.o
+-rw-r--r--  1 abiestro  2018_paris  2768 Nov 24 18:57 display_l.o
+
+.//objs/parse:
+total 8
+drwxr-xr-x  3 abiestro  2018_paris  102 Nov 24 18:57 arguments
+-rw-r--r--  1 abiestro  2018_paris  792 Nov 24 18:57 ft_parse_ls.o
+drwxr-xr-x  5 abiestro  2018_paris  170 Nov 24 18:57 options
+
+.//objs/parse/arguments:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  1224 Nov 24 18:57 ft_ls_parse_arguments.o
+
+.//objs/parse/options:
+total 24
+-rw-r--r--  1 abiestro  2018_paris  1236 Nov 24 18:57 ft_add_option.o
+-rw-r--r--  1 abiestro  2018_paris   964 Nov 24 18:57 ft_parse_options.o
+-rw-r--r--  1 abiestro  2018_paris   200 Nov 24 18:57 set_display_options.o
+
+.//objs/sorts:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  1292 Nov 24 18:57 ft_insert_inchain_list.o
+
+.//srcs:
+total 16
+drwxr-xr-x  8 abiestro  2018_paris   272 Nov 20 14:14 dir_management
+drwxr-xr-x  6 abiestro  2018_paris   204 Nov  9 17:41 display
+-rw-r--r--  1 abiestro  2018_paris  1273 Nov 24 18:29 ft_ls.c
+-rw-r--r--  1 abiestro  2018_paris  1058 Nov  7 14:26 main.c
+drwxr-xr-x  5 abiestro  2018_paris   170 Nov  7 20:39 parse
+drwxr-xr-x  3 abiestro  2018_paris   102 Nov 24 18:43 sorts
+
+.//srcs/dir_management:
+total 48
+-rw-r--r--  1 abiestro  2018_paris  1259 Nov  7 17:24 add_dir_to_chain.c
+-rw-r--r--  1 abiestro  2018_paris  1130 Nov  7 18:45 copy_stat_to_ls_dir.c
+-rw-r--r--  1 abiestro  2018_paris  1177 Nov 24 17:38 ft_malloc_ls.c
+-rw-r--r--  1 abiestro  2018_paris  1442 Nov 24 18:23 ft_malloc_ls_dir.c
+-rw-r--r--  1 abiestro  2018_paris  2882 Nov 24 17:35 ft_read_and_save_dir.c
+-rw-r--r--  1 abiestro  2018_paris  1377 Nov 24 17:51 handler.c
+
+.//srcs/display:
+total 32
+-rw-r--r--  1 abiestro  2018_paris  1063 Nov 24 17:17 display_bad_arguments.c
+-rw-r--r--  1 abiestro  2018_paris  2619 Nov 24 18:26 display_dir.c
+-rw-r--r--  1 abiestro  2018_paris  1332 Nov 24 17:02 display_files.c
+-rw-r--r--  1 abiestro  2018_paris  2694 Nov 24 15:19 display_l.c
+
+.//srcs/parse:
+total 8
+drwxr-xr-x  3 abiestro  2018_paris   102 Nov 24 18:39 arguments
+-rw-r--r--  1 abiestro  2018_paris  1095 Nov 10 18:38 ft_parse_ls.c
+drwxr-xr-x  5 abiestro  2018_paris   170 Nov 24 18:40 options
+
+.//srcs/parse/arguments:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  1596 Nov 24 18:45 ft_ls_parse_arguments.c
+
+.//srcs/parse/options:
+total 24
+-rw-r--r--  1 abiestro  2018_paris  1463 Nov 24 18:40 ft_add_option.c
+-rw-r--r--  1 abiestro  2018_paris  1142 Nov 24 18:39 ft_parse_options.c
+-rw-r--r--  1 abiestro  2018_paris  1182 Nov 10 18:01 set_display_options.c
+
+.//srcs/sorts:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  1694 Nov 24 18:43 ft_insert_inchain_list.c
+total 136
+-rw-r--r--  1 abiestro  2018_paris   3144 Nov 24 18:56 Makefile
+-rw-r--r--  1 abiestro  2018_paris      9 Nov 24 18:18 auteur
+-rwxr-xr-x  1 abiestro  2018_paris  37400 Nov 24 18:58 ft_ls
+drwxr-xr-x  4 abiestro  2018_paris    136 Nov  7 14:40 includes
+drwxr-xr-x  4 abiestro  2018_paris    136 Oct 22 19:25 libs
+drwxr-xr-x  8 abiestro  2018_paris    272 Nov 24 18:57 objs
+drwxr-xr-x  8 abiestro  2018_paris    272 Nov 14 18:15 srcs
+-rw-r--r--  1 abiestro  2018_paris  16603 Nov 24 19:00 test
+
+.//includes:
+total 16
+-rw-r--r--  1 abiestro  2018_paris  2243 Nov 24 17:46 ft_ls.h
+-rw-r--r--  1 abiestro  2018_paris  1877 Nov 24 17:43 t_ls.h
+
+.//libs:
+total 0
+drwxr-xr-x    8 abiestro  2018_paris   272 Nov 24 18:58 ft_printf
+drwxr-xr-x  132 abiestro  2018_paris  4488 Nov 24 18:58 libft
+
+.//libs/ft_printf:
+total 96
+-rw-r--r--   1 abiestro  2018_paris   1913 Nov  9 16:02 Makefile
+-rw-r--r--   1 abiestro  2018_paris      9 Oct 22 16:59 author
+drwxr-xr-x   3 abiestro  2018_paris    102 Oct 22 16:59 includes
+-rw-r--r--   1 abiestro  2018_paris  38480 Nov 24 18:58 libftprintf.a
+drwxr-xr-x  22 abiestro  2018_paris    748 Nov 24 18:58 objs
+drwxr-xr-x  22 abiestro  2018_paris    748 Nov 22 17:04 srcs
+
+.//libs/ft_printf/includes:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  3928 Oct 22 16:59 ft_printf.h
+
+.//libs/ft_printf/objs:
+total 160
+-rw-r--r--  1 abiestro  2018_paris   856 Nov 24 18:58 arg_char.o
+-rw-r--r--  1 abiestro  2018_paris   872 Nov 24 18:58 arg_hashtag.o
+-rw-r--r--  1 abiestro  2018_paris  2480 Nov 24 18:58 arg_hexa.o
+-rw-r--r--  1 abiestro  2018_paris  2460 Nov 24 18:58 arg_int.o
+-rw-r--r--  1 abiestro  2018_paris  2160 Nov 24 18:58 arg_octal.o
+-rw-r--r--  1 abiestro  2018_paris  2312 Nov 24 18:58 arg_pointeur.o
+-rw-r--r--  1 abiestro  2018_paris  1760 Nov 24 18:58 arg_string.o
+-rw-r--r--  1 abiestro  2018_paris  2156 Nov 24 18:58 arg_unsigned_int.o
+-rw-r--r--  1 abiestro  2018_paris  2304 Nov 24 18:58 arg_wchar.o
+-rw-r--r--  1 abiestro  2018_paris  2580 Nov 24 18:58 arg_wstring.o
+-rw-r--r--  1 abiestro  2018_paris   916 Nov 24 18:58 ft_atoi.o
+-rw-r--r--  1 abiestro  2018_paris   660 Nov 24 18:58 ft_bzero.o
+-rw-r--r--  1 abiestro  2018_paris  1536 Nov 24 18:58 ft_itoa.o
+-rw-r--r--  1 abiestro  2018_paris  3248 Nov 24 18:58 ft_printf.o
+-rw-r--r--  1 abiestro  2018_paris  1576 Nov 24 18:58 ft_setarg.o
+-rw-r--r--  1 abiestro  2018_paris   732 Nov 24 18:58 ft_strcpy.o
+-rw-r--r--  1 abiestro  2018_paris   660 Nov 24 18:58 ft_strlen.o
+-rw-r--r--  1 abiestro  2018_paris  3072 Nov 24 18:58 parse_struct.o
+-rw-r--r--  1 abiestro  2018_paris  1004 Nov 24 18:58 parse_struct2.o
+-rw-r--r--  1 abiestro  2018_paris  2840 Nov 24 18:58 utils_math.o
+
+.//libs/ft_printf/srcs:
+total 160
+-rw-r--r--  1 abiestro  2018_paris  1290 Oct 22 16:59 arg_char.c
+-rw-r--r--  1 abiestro  2018_paris  1322 Oct 22 16:59 arg_hashtag.c
+-rw-r--r--  1 abiestro  2018_paris  2988 Oct 22 16:59 arg_hexa.c
+-rw-r--r--  1 abiestro  2018_paris  2889 Oct 22 16:59 arg_int.c
+-rw-r--r--  1 abiestro  2018_paris  2590 Oct 22 16:59 arg_octal.c
+-rw-r--r--  1 abiestro  2018_paris  2682 Oct 22 16:59 arg_pointeur.c
+-rw-r--r--  1 abiestro  2018_paris  1983 Oct 22 16:59 arg_string.c
+-rw-r--r--  1 abiestro  2018_paris  2511 Oct 22 16:59 arg_unsigned_int.c
+-rw-r--r--  1 abiestro  2018_paris  2895 Oct 22 16:59 arg_wchar.c
+-rw-r--r--  1 abiestro  2018_paris  2876 Oct 22 16:59 arg_wstring.c
+-rw-r--r--  1 abiestro  2018_paris  1249 Oct 22 16:59 ft_atoi.c
+-rw-r--r--  1 abiestro  2018_paris  1014 Oct 22 16:59 ft_bzero.c
+-rw-r--r--  1 abiestro  2018_paris  1913 Oct 22 16:59 ft_itoa.c
+-rw-r--r--  1 abiestro  2018_paris  2975 Nov 20 14:05 ft_printf.c
+-rw-r--r--  1 abiestro  2018_paris  1942 Oct 22 16:59 ft_setarg.c
+-rw-r--r--  1 abiestro  2018_paris  1113 Nov 22 17:04 ft_strcpy.c
+-rw-r--r--  1 abiestro  2018_paris  1032 Oct 22 16:59 ft_strlen.c
+-rw-r--r--  1 abiestro  2018_paris  3872 Oct 22 16:59 parse_struct.c
+-rw-r--r--  1 abiestro  2018_paris  1519 Oct 22 16:59 parse_struct2.c
+-rw-r--r--  1 abiestro  2018_paris  3703 Oct 22 16:59 utils_math.c
+
+.//libs/libft:
+total 1144
+-rw-r--r--  1 abiestro  2018_paris   2230 Nov  9 18:14 Makefile
+-rw-r--r--  1 abiestro  2018_paris      9 Oct 22 17:05 auteur
+-rw-r--r--  1 abiestro  2018_paris   1233 Oct 22 17:05 ft_atoi.c
+-rw-r--r--  1 abiestro  2018_paris    916 Nov 24 18:58 ft_atoi.o
+-rw-r--r--  1 abiestro  2018_paris   1870 Oct 22 17:05 ft_atoi_base.c
+-rw-r--r--  1 abiestro  2018_paris   1556 Nov 24 18:58 ft_atoi_base.o
+-rw-r--r--  1 abiestro  2018_paris    998 Oct 22 17:05 ft_bzero.c
+-rw-r--r--  1 abiestro  2018_paris    660 Nov 24 18:58 ft_bzero.o
+-rw-r--r--  1 abiestro  2018_paris   1137 Oct 22 17:05 ft_is_prime.c
+-rw-r--r--  1 abiestro  2018_paris    776 Nov 24 18:58 ft_is_prime.o
+-rw-r--r--  1 abiestro  2018_paris   1049 Oct 22 17:05 ft_isalnum.c
+-rw-r--r--  1 abiestro  2018_paris    696 Nov 24 18:58 ft_isalnum.o
+-rw-r--r--  1 abiestro  2018_paris   1020 Oct 22 17:05 ft_isalpha.c
+-rw-r--r--  1 abiestro  2018_paris    672 Nov 24 18:58 ft_isalpha.o
+-rw-r--r--  1 abiestro  2018_paris    969 Oct 22 17:05 ft_isascii.c
+-rw-r--r--  1 abiestro  2018_paris    648 Nov 24 18:58 ft_isascii.o
+-rw-r--r--  1 abiestro  2018_paris    999 Oct 22 17:05 ft_isdigit.c
+-rw-r--r--  1 abiestro  2018_paris    656 Nov 24 18:58 ft_isdigit.o
+-rw-r--r--  1 abiestro  2018_paris    981 Oct 22 17:05 ft_isprint.c
+-rw-r--r--  1 abiestro  2018_paris    656 Nov 24 18:58 ft_isprint.o
+-rw-r--r--  1 abiestro  2018_paris   1277 Nov  9 18:13 ft_itoa.c
+-rw-r--r--  1 abiestro  2018_paris    200 Nov  9 18:14 ft_itoa.o
+-rw-r--r--  1 abiestro  2018_paris    993 Oct 22 17:05 ft_lstadd.c
+-rw-r--r--  1 abiestro  2018_paris    636 Nov 24 18:58 ft_lstadd.o
+-rw-r--r--  1 abiestro  2018_paris   1150 Oct 22 17:05 ft_lstdel.c
+-rw-r--r--  1 abiestro  2018_paris    756 Nov 24 18:58 ft_lstdel.o
+-rw-r--r--  1 abiestro  2018_paris   1058 Oct 22 17:05 ft_lstdelone.c
+-rw-r--r--  1 abiestro  2018_paris    720 Nov 24 18:58 ft_lstdelone.o
+-rw-r--r--  1 abiestro  2018_paris   1018 Oct 22 17:05 ft_lstiter.c
+-rw-r--r--  1 abiestro  2018_paris    664 Nov 24 18:58 ft_lstiter.o
+-rw-r--r--  1 abiestro  2018_paris   1150 Oct 22 17:05 ft_lstmap.c
+-rw-r--r--  1 abiestro  2018_paris    748 Nov 24 18:58 ft_lstmap.o
+-rw-r--r--  1 abiestro  2018_paris   1356 Oct 22 17:05 ft_lstnew.c
+-rw-r--r--  1 abiestro  2018_paris    884 Nov 24 18:58 ft_lstnew.o
+-rw-r--r--  1 abiestro  2018_paris   1115 Oct 22 17:05 ft_memalloc.c
+-rw-r--r--  1 abiestro  2018_paris    760 Nov 24 18:58 ft_memalloc.o
+-rw-r--r--  1 abiestro  2018_paris   1116 Oct 22 17:05 ft_memccpy.c
+-rw-r--r--  1 abiestro  2018_paris    736 Nov 24 18:58 ft_memccpy.o
+-rw-r--r--  1 abiestro  2018_paris   1099 Oct 22 17:05 ft_memchr.c
+-rw-r--r--  1 abiestro  2018_paris    716 Nov 24 18:58 ft_memchr.o
+-rw-r--r--  1 abiestro  2018_paris   1137 Oct 22 17:05 ft_memcmp.c
+-rw-r--r--  1 abiestro  2018_paris    764 Nov 24 18:58 ft_memcmp.o
+-rw-r--r--  1 abiestro  2018_paris   1099 Oct 22 17:05 ft_memcpy.c
+-rw-r--r--  1 abiestro  2018_paris    692 Nov 24 18:58 ft_memcpy.o
+-rw-r--r--  1 abiestro  2018_paris    967 Oct 22 17:05 ft_memdel.c
+-rw-r--r--  1 abiestro  2018_paris    676 Nov 24 18:58 ft_memdel.o
+-rw-r--r--  1 abiestro  2018_paris   1196 Oct 22 17:05 ft_memmove.c
+-rw-r--r--  1 abiestro  2018_paris    816 Nov 24 18:58 ft_memmove.o
+-rw-r--r--  1 abiestro  2018_paris   1068 Oct 22 17:05 ft_memset.c
+-rw-r--r--  1 abiestro  2018_paris    676 Nov 24 18:58 ft_memset.o
+-rw-r--r--  1 abiestro  2018_paris    958 Oct 22 17:05 ft_putchar.c
+-rw-r--r--  1 abiestro  2018_paris    676 Nov 24 18:58 ft_putchar.o
+-rw-r--r--  1 abiestro  2018_paris    970 Oct 22 17:05 ft_putchar_fd.c
+-rw-r--r--  1 abiestro  2018_paris    688 Nov 24 18:58 ft_putchar_fd.o
+-rw-r--r--  1 abiestro  2018_paris    989 Oct 22 17:05 ft_putendl.c
+-rw-r--r--  1 abiestro  2018_paris    708 Nov 24 18:58 ft_putendl.o
+-rw-r--r--  1 abiestro  2018_paris   1017 Oct 22 17:05 ft_putendl_fd.c
+-rw-r--r--  1 abiestro  2018_paris    768 Nov 24 18:58 ft_putendl_fd.o
+-rw-r--r--  1 abiestro  2018_paris   1077 Oct 22 17:05 ft_putnbr.c
+-rw-r--r--  1 abiestro  2018_paris    784 Nov 24 18:58 ft_putnbr.o
+-rw-r--r--  1 abiestro  2018_paris   1636 Oct 22 17:05 ft_putnbr_base.c
+-rw-r--r--  1 abiestro  2018_paris   1348 Nov 24 18:58 ft_putnbr_base.o
+-rw-r--r--  1 abiestro  2018_paris   1109 Oct 22 17:05 ft_putnbr_fd.c
+-rw-r--r--  1 abiestro  2018_paris    808 Nov 24 18:58 ft_putnbr_fd.o
+-rw-r--r--  1 abiestro  2018_paris    978 Oct 22 17:05 ft_putstr.c
+-rw-r--r--  1 abiestro  2018_paris    696 Nov 24 18:58 ft_putstr.o
+-rw-r--r--  1 abiestro  2018_paris   1002 Oct 22 17:05 ft_putstr_fd.c
+-rw-r--r--  1 abiestro  2018_paris    712 Nov 24 18:58 ft_putstr_fd.o
+-rw-r--r--  1 abiestro  2018_paris   1135 Oct 22 17:05 ft_sort_integer_table.c
+-rw-r--r--  1 abiestro  2018_paris    784 Nov 24 18:58 ft_sort_integer_table.o
+-rw-r--r--  1 abiestro  2018_paris   1391 Oct 22 17:05 ft_sort_wordtab.c
+-rw-r--r--  1 abiestro  2018_paris   1204 Nov 24 18:58 ft_sort_wordtab.o
+-rw-r--r--  1 abiestro  2018_paris   1104 Oct 22 17:05 ft_strcat.c
+-rw-r--r--  1 abiestro  2018_paris    732 Nov 24 18:58 ft_strcat.o
+-rw-r--r--  1 abiestro  2018_paris   1099 Oct 22 17:05 ft_strchr.c
+-rw-r--r--  1 abiestro  2018_paris    764 Nov 24 18:58 ft_strchr.o
+-rw-r--r--  1 abiestro  2018_paris    990 Oct 22 17:05 ft_strclr.c
+-rw-r--r--  1 abiestro  2018_paris    652 Nov 24 18:58 ft_strclr.o
+-rw-r--r--  1 abiestro  2018_paris   1165 Oct 22 17:05 ft_strcmp.c
+-rw-r--r--  1 abiestro  2018_paris    748 Nov 24 18:58 ft_strcmp.o
+-rw-r--r--  1 abiestro  2018_paris   1060 Oct 22 17:05 ft_strcpy.c
+-rw-r--r--  1 abiestro  2018_paris    692 Nov 24 18:58 ft_strcpy.o
+-rw-r--r--  1 abiestro  2018_paris    964 Oct 22 17:05 ft_strdel.c
+-rw-r--r--  1 abiestro  2018_paris    676 Nov 24 18:58 ft_strdel.o
+-rw-r--r--  1 abiestro  2018_paris   1166 Oct 22 17:05 ft_strdup.c
+-rw-r--r--  1 abiestro  2018_paris    828 Nov 24 18:58 ft_strdup.o
+-rw-r--r--  1 abiestro  2018_paris   1075 Oct 22 17:05 ft_strequ.c
+-rw-r--r--  1 abiestro  2018_paris    756 Nov 24 18:58 ft_strequ.o
+-rw-r--r--  1 abiestro  2018_paris    985 Oct 22 17:05 ft_striter.c
+-rw-r--r--  1 abiestro  2018_paris    664 Nov 24 18:58 ft_striter.o
+-rw-r--r--  1 abiestro  2018_paris   1022 Oct 22 17:05 ft_striteri.c
+-rw-r--r--  1 abiestro  2018_paris    688 Nov 24 18:58 ft_striteri.o
+-rw-r--r--  1 abiestro  2018_paris   1193 Oct 22 17:05 ft_strjoin.c
+-rw-r--r--  1 abiestro  2018_paris    912 Nov 24 18:58 ft_strjoin.o
+-rw-r--r--  1 abiestro  2018_paris   1211 Oct 22 17:05 ft_strlcat.c
+-rw-r--r--  1 abiestro  2018_paris    920 Nov 24 18:58 ft_strlcat.o
+-rw-r--r--  1 abiestro  2018_paris   1016 Oct 22 17:05 ft_strlen.c
+-rw-r--r--  1 abiestro  2018_paris    660 Nov 24 18:58 ft_strlen.o
+-rw-r--r--  1 abiestro  2018_paris   1152 Oct 22 17:05 ft_strmap.c
+-rw-r--r--  1 abiestro  2018_paris    824 Nov 24 18:58 ft_strmap.o
+-rw-r--r--  1 abiestro  2018_paris   1189 Oct 22 17:05 ft_strmapi.c
+-rw-r--r--  1 abiestro  2018_paris    848 Nov 24 18:58 ft_strmapi.o
+-rw-r--r--  1 abiestro  2018_paris   1129 Oct 22 17:05 ft_strncat.c
+-rw-r--r--  1 abiestro  2018_paris    784 Nov 24 18:58 ft_strncat.o
+-rw-r--r--  1 abiestro  2018_paris   1183 Oct 22 17:05 ft_strncmp.c
+-rw-r--r--  1 abiestro  2018_paris    792 Nov 24 18:58 ft_strncmp.o
+-rw-r--r--  1 abiestro  2018_paris   1135 Oct 22 17:05 ft_strncpy.c
+-rw-r--r--  1 abiestro  2018_paris    784 Nov 24 18:58 ft_strncpy.o
+-rw-r--r--  1 abiestro  2018_paris   1125 Oct 22 17:05 ft_strnequ.c
+-rw-r--r--  1 abiestro  2018_paris    816 Nov 24 18:58 ft_strnequ.o
+-rw-r--r--  1 abiestro  2018_paris   1094 Oct 22 17:05 ft_strnew.c
+-rw-r--r--  1 abiestro  2018_paris    772 Nov 24 18:58 ft_strnew.o
+-rw-r--r--  1 abiestro  2018_paris   1344 Oct 22 17:05 ft_strnstr.c
+-rw-r--r--  1 abiestro  2018_paris    936 Nov 24 18:58 ft_strnstr.o
+-rw-r--r--  1 abiestro  2018_paris   1121 Oct 22 17:05 ft_strrchr.c
+-rw-r--r--  1 abiestro  2018_paris    728 Nov 24 18:58 ft_strrchr.o
+-rw-r--r--  1 abiestro  2018_paris   1791 Oct 22 17:05 ft_strsplit.c
+-rw-r--r--  1 abiestro  2018_paris   1836 Nov 24 18:58 ft_strsplit.o
+-rw-r--r--  1 abiestro  2018_paris   1240 Oct 22 17:05 ft_strstr.c
+-rw-r--r--  1 abiestro  2018_paris    788 Nov 24 18:58 ft_strstr.o
+-rw-r--r--  1 abiestro  2018_paris   1159 Oct 22 17:05 ft_strsub.c
+-rw-r--r--  1 abiestro  2018_paris    836 Nov 24 18:58 ft_strsub.o
+-rw-r--r--  1 abiestro  2018_paris   1341 Oct 22 17:05 ft_strtrim.c
+-rw-r--r--  1 abiestro  2018_paris   1116 Nov 24 18:58 ft_strtrim.o
+-rw-r--r--  1 abiestro  2018_paris    998 Oct 22 17:05 ft_tolower.c
+-rw-r--r--  1 abiestro  2018_paris    656 Nov 24 18:58 ft_tolower.o
+-rw-r--r--  1 abiestro  2018_paris    998 Oct 22 17:05 ft_toupper.c
+-rw-r--r--  1 abiestro  2018_paris    656 Nov 24 18:58 ft_toupper.o
+-rw-r--r--  1 abiestro  2018_paris  55968 Nov 24 18:58 libft.a
+-rw-r--r--  1 abiestro  2018_paris   4004 Oct 22 19:38 libft.h
+
+.//objs:
+total 16
+drwxr-xr-x  8 abiestro  2018_paris  272 Nov 24 18:57 dir_management
+drwxr-xr-x  6 abiestro  2018_paris  204 Nov 24 18:57 display
+-rw-r--r--  1 abiestro  2018_paris  904 Nov 24 18:57 ft_ls.o
+-rw-r--r--  1 abiestro  2018_paris  672 Nov 24 18:57 main.o
+drwxr-xr-x  5 abiestro  2018_paris  170 Nov 24 18:57 parse
+drwxr-xr-x  3 abiestro  2018_paris  102 Nov 24 18:57 sorts
+
+.//objs/dir_management:
+total 48
+-rw-r--r--  1 abiestro  2018_paris   760 Nov 24 18:57 add_dir_to_chain.o
+-rw-r--r--  1 abiestro  2018_paris   724 Nov 24 18:57 copy_stat_to_ls_dir.o
+-rw-r--r--  1 abiestro  2018_paris   912 Nov 24 18:57 ft_malloc_ls.o
+-rw-r--r--  1 abiestro  2018_paris  1104 Nov 24 18:57 ft_malloc_ls_dir.o
+-rw-r--r--  1 abiestro  2018_paris  2484 Nov 24 18:57 ft_read_and_save_dir.o
+-rw-r--r--  1 abiestro  2018_paris  1008 Nov 24 18:57 handler.o
+
+.//objs/display:
+total 32
+-rw-r--r--  1 abiestro  2018_paris   824 Nov 24 18:57 display_bad_arguments.o
+-rw-r--r--  1 abiestro  2018_paris  2316 Nov 24 18:57 display_dir.o
+-rw-r--r--  1 abiestro  2018_paris  1160 Nov 24 18:57 display_files.o
+-rw-r--r--  1 abiestro  2018_paris  2768 Nov 24 18:57 display_l.o
+
+.//objs/parse:
+total 8
+drwxr-xr-x  3 abiestro  2018_paris  102 Nov 24 18:57 arguments
+-rw-r--r--  1 abiestro  2018_paris  792 Nov 24 18:57 ft_parse_ls.o
+drwxr-xr-x  5 abiestro  2018_paris  170 Nov 24 18:57 options
+
+.//objs/parse/arguments:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  1224 Nov 24 18:57 ft_ls_parse_arguments.o
+
+.//objs/parse/options:
+total 24
+-rw-r--r--  1 abiestro  2018_paris  1236 Nov 24 18:57 ft_add_option.o
+-rw-r--r--  1 abiestro  2018_paris   964 Nov 24 18:57 ft_parse_options.o
+-rw-r--r--  1 abiestro  2018_paris   200 Nov 24 18:57 set_display_options.o
+
+.//objs/sorts:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  1292 Nov 24 18:57 ft_insert_inchain_list.o
+
+.//srcs:
+total 16
+drwxr-xr-x  8 abiestro  2018_paris   272 Nov 20 14:14 dir_management
+drwxr-xr-x  6 abiestro  2018_paris   204 Nov  9 17:41 display
+-rw-r--r--  1 abiestro  2018_paris  1273 Nov 24 18:29 ft_ls.c
+-rw-r--r--  1 abiestro  2018_paris  1058 Nov  7 14:26 main.c
+drwxr-xr-x  5 abiestro  2018_paris   170 Nov  7 20:39 parse
+drwxr-xr-x  3 abiestro  2018_paris   102 Nov 24 18:43 sorts
+
+.//srcs/dir_management:
+total 48
+-rw-r--r--  1 abiestro  2018_paris  1259 Nov  7 17:24 add_dir_to_chain.c
+-rw-r--r--  1 abiestro  2018_paris  1130 Nov  7 18:45 copy_stat_to_ls_dir.c
+-rw-r--r--  1 abiestro  2018_paris  1177 Nov 24 17:38 ft_malloc_ls.c
+-rw-r--r--  1 abiestro  2018_paris  1442 Nov 24 18:23 ft_malloc_ls_dir.c
+-rw-r--r--  1 abiestro  2018_paris  2882 Nov 24 17:35 ft_read_and_save_dir.c
+-rw-r--r--  1 abiestro  2018_paris  1377 Nov 24 17:51 handler.c
+
+.//srcs/display:
+total 32
+-rw-r--r--  1 abiestro  2018_paris  1063 Nov 24 17:17 display_bad_arguments.c
+-rw-r--r--  1 abiestro  2018_paris  2619 Nov 24 18:26 display_dir.c
+-rw-r--r--  1 abiestro  2018_paris  1332 Nov 24 17:02 display_files.c
+-rw-r--r--  1 abiestro  2018_paris  2694 Nov 24 15:19 display_l.c
+
+.//srcs/parse:
+total 8
+drwxr-xr-x  3 abiestro  2018_paris   102 Nov 24 18:39 arguments
+-rw-r--r--  1 abiestro  2018_paris  1095 Nov 10 18:38 ft_parse_ls.c
+drwxr-xr-x  5 abiestro  2018_paris   170 Nov 24 18:40 options
+
+.//srcs/parse/arguments:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  1596 Nov 24 18:45 ft_ls_parse_arguments.c
+
+.//srcs/parse/options:
+total 24
+-rw-r--r--  1 abiestro  2018_paris  1463 Nov 24 18:40 ft_add_option.c
+-rw-r--r--  1 abiestro  2018_paris  1142 Nov 24 18:39 ft_parse_options.c
+-rw-r--r--  1 abiestro  2018_paris  1182 Nov 10 18:01 set_display_options.c
+
+.//srcs/sorts:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  1694 Nov 24 18:43 ft_insert_inchain_list.c
+total 168
+-rw-r--r--  1 abiestro  2018_paris   3144 Nov 24 18:56 Makefile
+-rw-r--r--  1 abiestro  2018_paris      9 Nov 24 18:18 auteur
+-rwxr-xr-x  1 abiestro  2018_paris  37400 Nov 24 18:58 ft_ls
+drwxr-xr-x  4 abiestro  2018_paris    136 Nov  7 14:40 includes
+drwxr-xr-x  4 abiestro  2018_paris    136 Oct 22 19:25 libs
+drwxr-xr-x  8 abiestro  2018_paris    272 Nov 24 18:57 objs
+drwxr-xr-x  8 abiestro  2018_paris    272 Nov 14 18:15 srcs
+-rw-r--r--  1 abiestro  2018_paris  33207 Nov 24 19:00 test
+
+.//includes:
+total 16
+-rw-r--r--  1 abiestro  2018_paris  2243 Nov 24 17:46 ft_ls.h
+-rw-r--r--  1 abiestro  2018_paris  1877 Nov 24 17:43 t_ls.h
+
+.//libs:
+total 0
+drwxr-xr-x    8 abiestro  2018_paris   272 Nov 24 18:58 ft_printf
+drwxr-xr-x  132 abiestro  2018_paris  4488 Nov 24 18:58 libft
+
+.//libs/ft_printf:
+total 96
+-rw-r--r--   1 abiestro  2018_paris   1913 Nov  9 16:02 Makefile
+-rw-r--r--   1 abiestro  2018_paris      9 Oct 22 16:59 author
+drwxr-xr-x   3 abiestro  2018_paris    102 Oct 22 16:59 includes
+-rw-r--r--   1 abiestro  2018_paris  38480 Nov 24 18:58 libftprintf.a
+drwxr-xr-x  22 abiestro  2018_paris    748 Nov 24 18:58 objs
+drwxr-xr-x  22 abiestro  2018_paris    748 Nov 22 17:04 srcs
+
+.//libs/ft_printf/includes:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  3928 Oct 22 16:59 ft_printf.h
+
+.//libs/ft_printf/objs:
+total 160
+-rw-r--r--  1 abiestro  2018_paris   856 Nov 24 18:58 arg_char.o
+-rw-r--r--  1 abiestro  2018_paris   872 Nov 24 18:58 arg_hashtag.o
+-rw-r--r--  1 abiestro  2018_paris  2480 Nov 24 18:58 arg_hexa.o
+-rw-r--r--  1 abiestro  2018_paris  2460 Nov 24 18:58 arg_int.o
+-rw-r--r--  1 abiestro  2018_paris  2160 Nov 24 18:58 arg_octal.o
+-rw-r--r--  1 abiestro  2018_paris  2312 Nov 24 18:58 arg_pointeur.o
+-rw-r--r--  1 abiestro  2018_paris  1760 Nov 24 18:58 arg_string.o
+-rw-r--r--  1 abiestro  2018_paris  2156 Nov 24 18:58 arg_unsigned_int.o
+-rw-r--r--  1 abiestro  2018_paris  2304 Nov 24 18:58 arg_wchar.o
+-rw-r--r--  1 abiestro  2018_paris  2580 Nov 24 18:58 arg_wstring.o
+-rw-r--r--  1 abiestro  2018_paris   916 Nov 24 18:58 ft_atoi.o
+-rw-r--r--  1 abiestro  2018_paris   660 Nov 24 18:58 ft_bzero.o
+-rw-r--r--  1 abiestro  2018_paris  1536 Nov 24 18:58 ft_itoa.o
+-rw-r--r--  1 abiestro  2018_paris  3248 Nov 24 18:58 ft_printf.o
+-rw-r--r--  1 abiestro  2018_paris  1576 Nov 24 18:58 ft_setarg.o
+-rw-r--r--  1 abiestro  2018_paris   732 Nov 24 18:58 ft_strcpy.o
+-rw-r--r--  1 abiestro  2018_paris   660 Nov 24 18:58 ft_strlen.o
+-rw-r--r--  1 abiestro  2018_paris  3072 Nov 24 18:58 parse_struct.o
+-rw-r--r--  1 abiestro  2018_paris  1004 Nov 24 18:58 parse_struct2.o
+-rw-r--r--  1 abiestro  2018_paris  2840 Nov 24 18:58 utils_math.o
+
+.//libs/ft_printf/srcs:
+total 160
+-rw-r--r--  1 abiestro  2018_paris  1290 Oct 22 16:59 arg_char.c
+-rw-r--r--  1 abiestro  2018_paris  1322 Oct 22 16:59 arg_hashtag.c
+-rw-r--r--  1 abiestro  2018_paris  2988 Oct 22 16:59 arg_hexa.c
+-rw-r--r--  1 abiestro  2018_paris  2889 Oct 22 16:59 arg_int.c
+-rw-r--r--  1 abiestro  2018_paris  2590 Oct 22 16:59 arg_octal.c
+-rw-r--r--  1 abiestro  2018_paris  2682 Oct 22 16:59 arg_pointeur.c
+-rw-r--r--  1 abiestro  2018_paris  1983 Oct 22 16:59 arg_string.c
+-rw-r--r--  1 abiestro  2018_paris  2511 Oct 22 16:59 arg_unsigned_int.c
+-rw-r--r--  1 abiestro  2018_paris  2895 Oct 22 16:59 arg_wchar.c
+-rw-r--r--  1 abiestro  2018_paris  2876 Oct 22 16:59 arg_wstring.c
+-rw-r--r--  1 abiestro  2018_paris  1249 Oct 22 16:59 ft_atoi.c
+-rw-r--r--  1 abiestro  2018_paris  1014 Oct 22 16:59 ft_bzero.c
+-rw-r--r--  1 abiestro  2018_paris  1913 Oct 22 16:59 ft_itoa.c
+-rw-r--r--  1 abiestro  2018_paris  2975 Nov 20 14:05 ft_printf.c
+-rw-r--r--  1 abiestro  2018_paris  1942 Oct 22 16:59 ft_setarg.c
+-rw-r--r--  1 abiestro  2018_paris  1113 Nov 22 17:04 ft_strcpy.c
+-rw-r--r--  1 abiestro  2018_paris  1032 Oct 22 16:59 ft_strlen.c
+-rw-r--r--  1 abiestro  2018_paris  3872 Oct 22 16:59 parse_struct.c
+-rw-r--r--  1 abiestro  2018_paris  1519 Oct 22 16:59 parse_struct2.c
+-rw-r--r--  1 abiestro  2018_paris  3703 Oct 22 16:59 utils_math.c
+
+.//libs/libft:
+total 1144
+-rw-r--r--  1 abiestro  2018_paris   2230 Nov  9 18:14 Makefile
+-rw-r--r--  1 abiestro  2018_paris      9 Oct 22 17:05 auteur
+-rw-r--r--  1 abiestro  2018_paris   1233 Oct 22 17:05 ft_atoi.c
+-rw-r--r--  1 abiestro  2018_paris    916 Nov 24 18:58 ft_atoi.o
+-rw-r--r--  1 abiestro  2018_paris   1870 Oct 22 17:05 ft_atoi_base.c
+-rw-r--r--  1 abiestro  2018_paris   1556 Nov 24 18:58 ft_atoi_base.o
+-rw-r--r--  1 abiestro  2018_paris    998 Oct 22 17:05 ft_bzero.c
+-rw-r--r--  1 abiestro  2018_paris    660 Nov 24 18:58 ft_bzero.o
+-rw-r--r--  1 abiestro  2018_paris   1137 Oct 22 17:05 ft_is_prime.c
+-rw-r--r--  1 abiestro  2018_paris    776 Nov 24 18:58 ft_is_prime.o
+-rw-r--r--  1 abiestro  2018_paris   1049 Oct 22 17:05 ft_isalnum.c
+-rw-r--r--  1 abiestro  2018_paris    696 Nov 24 18:58 ft_isalnum.o
+-rw-r--r--  1 abiestro  2018_paris   1020 Oct 22 17:05 ft_isalpha.c
+-rw-r--r--  1 abiestro  2018_paris    672 Nov 24 18:58 ft_isalpha.o
+-rw-r--r--  1 abiestro  2018_paris    969 Oct 22 17:05 ft_isascii.c
+-rw-r--r--  1 abiestro  2018_paris    648 Nov 24 18:58 ft_isascii.o
+-rw-r--r--  1 abiestro  2018_paris    999 Oct 22 17:05 ft_isdigit.c
+-rw-r--r--  1 abiestro  2018_paris    656 Nov 24 18:58 ft_isdigit.o
+-rw-r--r--  1 abiestro  2018_paris    981 Oct 22 17:05 ft_isprint.c
+-rw-r--r--  1 abiestro  2018_paris    656 Nov 24 18:58 ft_isprint.o
+-rw-r--r--  1 abiestro  2018_paris   1277 Nov  9 18:13 ft_itoa.c
+-rw-r--r--  1 abiestro  2018_paris    200 Nov  9 18:14 ft_itoa.o
+-rw-r--r--  1 abiestro  2018_paris    993 Oct 22 17:05 ft_lstadd.c
+-rw-r--r--  1 abiestro  2018_paris    636 Nov 24 18:58 ft_lstadd.o
+-rw-r--r--  1 abiestro  2018_paris   1150 Oct 22 17:05 ft_lstdel.c
+-rw-r--r--  1 abiestro  2018_paris    756 Nov 24 18:58 ft_lstdel.o
+-rw-r--r--  1 abiestro  2018_paris   1058 Oct 22 17:05 ft_lstdelone.c
+-rw-r--r--  1 abiestro  2018_paris    720 Nov 24 18:58 ft_lstdelone.o
+-rw-r--r--  1 abiestro  2018_paris   1018 Oct 22 17:05 ft_lstiter.c
+-rw-r--r--  1 abiestro  2018_paris    664 Nov 24 18:58 ft_lstiter.o
+-rw-r--r--  1 abiestro  2018_paris   1150 Oct 22 17:05 ft_lstmap.c
+-rw-r--r--  1 abiestro  2018_paris    748 Nov 24 18:58 ft_lstmap.o
+-rw-r--r--  1 abiestro  2018_paris   1356 Oct 22 17:05 ft_lstnew.c
+-rw-r--r--  1 abiestro  2018_paris    884 Nov 24 18:58 ft_lstnew.o
+-rw-r--r--  1 abiestro  2018_paris   1115 Oct 22 17:05 ft_memalloc.c
+-rw-r--r--  1 abiestro  2018_paris    760 Nov 24 18:58 ft_memalloc.o
+-rw-r--r--  1 abiestro  2018_paris   1116 Oct 22 17:05 ft_memccpy.c
+-rw-r--r--  1 abiestro  2018_paris    736 Nov 24 18:58 ft_memccpy.o
+-rw-r--r--  1 abiestro  2018_paris   1099 Oct 22 17:05 ft_memchr.c
+-rw-r--r--  1 abiestro  2018_paris    716 Nov 24 18:58 ft_memchr.o
+-rw-r--r--  1 abiestro  2018_paris   1137 Oct 22 17:05 ft_memcmp.c
+-rw-r--r--  1 abiestro  2018_paris    764 Nov 24 18:58 ft_memcmp.o
+-rw-r--r--  1 abiestro  2018_paris   1099 Oct 22 17:05 ft_memcpy.c
+-rw-r--r--  1 abiestro  2018_paris    692 Nov 24 18:58 ft_memcpy.o
+-rw-r--r--  1 abiestro  2018_paris    967 Oct 22 17:05 ft_memdel.c
+-rw-r--r--  1 abiestro  2018_paris    676 Nov 24 18:58 ft_memdel.o
+-rw-r--r--  1 abiestro  2018_paris   1196 Oct 22 17:05 ft_memmove.c
+-rw-r--r--  1 abiestro  2018_paris    816 Nov 24 18:58 ft_memmove.o
+-rw-r--r--  1 abiestro  2018_paris   1068 Oct 22 17:05 ft_memset.c
+-rw-r--r--  1 abiestro  2018_paris    676 Nov 24 18:58 ft_memset.o
+-rw-r--r--  1 abiestro  2018_paris    958 Oct 22 17:05 ft_putchar.c
+-rw-r--r--  1 abiestro  2018_paris    676 Nov 24 18:58 ft_putchar.o
+-rw-r--r--  1 abiestro  2018_paris    970 Oct 22 17:05 ft_putchar_fd.c
+-rw-r--r--  1 abiestro  2018_paris    688 Nov 24 18:58 ft_putchar_fd.o
+-rw-r--r--  1 abiestro  2018_paris    989 Oct 22 17:05 ft_putendl.c
+-rw-r--r--  1 abiestro  2018_paris    708 Nov 24 18:58 ft_putendl.o
+-rw-r--r--  1 abiestro  2018_paris   1017 Oct 22 17:05 ft_putendl_fd.c
+-rw-r--r--  1 abiestro  2018_paris    768 Nov 24 18:58 ft_putendl_fd.o
+-rw-r--r--  1 abiestro  2018_paris   1077 Oct 22 17:05 ft_putnbr.c
+-rw-r--r--  1 abiestro  2018_paris    784 Nov 24 18:58 ft_putnbr.o
+-rw-r--r--  1 abiestro  2018_paris   1636 Oct 22 17:05 ft_putnbr_base.c
+-rw-r--r--  1 abiestro  2018_paris   1348 Nov 24 18:58 ft_putnbr_base.o
+-rw-r--r--  1 abiestro  2018_paris   1109 Oct 22 17:05 ft_putnbr_fd.c
+-rw-r--r--  1 abiestro  2018_paris    808 Nov 24 18:58 ft_putnbr_fd.o
+-rw-r--r--  1 abiestro  2018_paris    978 Oct 22 17:05 ft_putstr.c
+-rw-r--r--  1 abiestro  2018_paris    696 Nov 24 18:58 ft_putstr.o
+-rw-r--r--  1 abiestro  2018_paris   1002 Oct 22 17:05 ft_putstr_fd.c
+-rw-r--r--  1 abiestro  2018_paris    712 Nov 24 18:58 ft_putstr_fd.o
+-rw-r--r--  1 abiestro  2018_paris   1135 Oct 22 17:05 ft_sort_integer_table.c
+-rw-r--r--  1 abiestro  2018_paris    784 Nov 24 18:58 ft_sort_integer_table.o
+-rw-r--r--  1 abiestro  2018_paris   1391 Oct 22 17:05 ft_sort_wordtab.c
+-rw-r--r--  1 abiestro  2018_paris   1204 Nov 24 18:58 ft_sort_wordtab.o
+-rw-r--r--  1 abiestro  2018_paris   1104 Oct 22 17:05 ft_strcat.c
+-rw-r--r--  1 abiestro  2018_paris    732 Nov 24 18:58 ft_strcat.o
+-rw-r--r--  1 abiestro  2018_paris   1099 Oct 22 17:05 ft_strchr.c
+-rw-r--r--  1 abiestro  2018_paris    764 Nov 24 18:58 ft_strchr.o
+-rw-r--r--  1 abiestro  2018_paris    990 Oct 22 17:05 ft_strclr.c
+-rw-r--r--  1 abiestro  2018_paris    652 Nov 24 18:58 ft_strclr.o
+-rw-r--r--  1 abiestro  2018_paris   1165 Oct 22 17:05 ft_strcmp.c
+-rw-r--r--  1 abiestro  2018_paris    748 Nov 24 18:58 ft_strcmp.o
+-rw-r--r--  1 abiestro  2018_paris   1060 Oct 22 17:05 ft_strcpy.c
+-rw-r--r--  1 abiestro  2018_paris    692 Nov 24 18:58 ft_strcpy.o
+-rw-r--r--  1 abiestro  2018_paris    964 Oct 22 17:05 ft_strdel.c
+-rw-r--r--  1 abiestro  2018_paris    676 Nov 24 18:58 ft_strdel.o
+-rw-r--r--  1 abiestro  2018_paris   1166 Oct 22 17:05 ft_strdup.c
+-rw-r--r--  1 abiestro  2018_paris    828 Nov 24 18:58 ft_strdup.o
+-rw-r--r--  1 abiestro  2018_paris   1075 Oct 22 17:05 ft_strequ.c
+-rw-r--r--  1 abiestro  2018_paris    756 Nov 24 18:58 ft_strequ.o
+-rw-r--r--  1 abiestro  2018_paris    985 Oct 22 17:05 ft_striter.c
+-rw-r--r--  1 abiestro  2018_paris    664 Nov 24 18:58 ft_striter.o
+-rw-r--r--  1 abiestro  2018_paris   1022 Oct 22 17:05 ft_striteri.c
+-rw-r--r--  1 abiestro  2018_paris    688 Nov 24 18:58 ft_striteri.o
+-rw-r--r--  1 abiestro  2018_paris   1193 Oct 22 17:05 ft_strjoin.c
+-rw-r--r--  1 abiestro  2018_paris    912 Nov 24 18:58 ft_strjoin.o
+-rw-r--r--  1 abiestro  2018_paris   1211 Oct 22 17:05 ft_strlcat.c
+-rw-r--r--  1 abiestro  2018_paris    920 Nov 24 18:58 ft_strlcat.o
+-rw-r--r--  1 abiestro  2018_paris   1016 Oct 22 17:05 ft_strlen.c
+-rw-r--r--  1 abiestro  2018_paris    660 Nov 24 18:58 ft_strlen.o
+-rw-r--r--  1 abiestro  2018_paris   1152 Oct 22 17:05 ft_strmap.c
+-rw-r--r--  1 abiestro  2018_paris    824 Nov 24 18:58 ft_strmap.o
+-rw-r--r--  1 abiestro  2018_paris   1189 Oct 22 17:05 ft_strmapi.c
+-rw-r--r--  1 abiestro  2018_paris    848 Nov 24 18:58 ft_strmapi.o
+-rw-r--r--  1 abiestro  2018_paris   1129 Oct 22 17:05 ft_strncat.c
+-rw-r--r--  1 abiestro  2018_paris    784 Nov 24 18:58 ft_strncat.o
+-rw-r--r--  1 abiestro  2018_paris   1183 Oct 22 17:05 ft_strncmp.c
+-rw-r--r--  1 abiestro  2018_paris    792 Nov 24 18:58 ft_strncmp.o
+-rw-r--r--  1 abiestro  2018_paris   1135 Oct 22 17:05 ft_strncpy.c
+-rw-r--r--  1 abiestro  2018_paris    784 Nov 24 18:58 ft_strncpy.o
+-rw-r--r--  1 abiestro  2018_paris   1125 Oct 22 17:05 ft_strnequ.c
+-rw-r--r--  1 abiestro  2018_paris    816 Nov 24 18:58 ft_strnequ.o
+-rw-r--r--  1 abiestro  2018_paris   1094 Oct 22 17:05 ft_strnew.c
+-rw-r--r--  1 abiestro  2018_paris    772 Nov 24 18:58 ft_strnew.o
+-rw-r--r--  1 abiestro  2018_paris   1344 Oct 22 17:05 ft_strnstr.c
+-rw-r--r--  1 abiestro  2018_paris    936 Nov 24 18:58 ft_strnstr.o
+-rw-r--r--  1 abiestro  2018_paris   1121 Oct 22 17:05 ft_strrchr.c
+-rw-r--r--  1 abiestro  2018_paris    728 Nov 24 18:58 ft_strrchr.o
+-rw-r--r--  1 abiestro  2018_paris   1791 Oct 22 17:05 ft_strsplit.c
+-rw-r--r--  1 abiestro  2018_paris   1836 Nov 24 18:58 ft_strsplit.o
+-rw-r--r--  1 abiestro  2018_paris   1240 Oct 22 17:05 ft_strstr.c
+-rw-r--r--  1 abiestro  2018_paris    788 Nov 24 18:58 ft_strstr.o
+-rw-r--r--  1 abiestro  2018_paris   1159 Oct 22 17:05 ft_strsub.c
+-rw-r--r--  1 abiestro  2018_paris    836 Nov 24 18:58 ft_strsub.o
+-rw-r--r--  1 abiestro  2018_paris   1341 Oct 22 17:05 ft_strtrim.c
+-rw-r--r--  1 abiestro  2018_paris   1116 Nov 24 18:58 ft_strtrim.o
+-rw-r--r--  1 abiestro  2018_paris    998 Oct 22 17:05 ft_tolower.c
+-rw-r--r--  1 abiestro  2018_paris    656 Nov 24 18:58 ft_tolower.o
+-rw-r--r--  1 abiestro  2018_paris    998 Oct 22 17:05 ft_toupper.c
+-rw-r--r--  1 abiestro  2018_paris    656 Nov 24 18:58 ft_toupper.o
+-rw-r--r--  1 abiestro  2018_paris  55968 Nov 24 18:58 libft.a
+-rw-r--r--  1 abiestro  2018_paris   4004 Oct 22 19:38 libft.h
+
+.//objs:
+total 16
+drwxr-xr-x  8 abiestro  2018_paris  272 Nov 24 18:57 dir_management
+drwxr-xr-x  6 abiestro  2018_paris  204 Nov 24 18:57 display
+-rw-r--r--  1 abiestro  2018_paris  904 Nov 24 18:57 ft_ls.o
+-rw-r--r--  1 abiestro  2018_paris  672 Nov 24 18:57 main.o
+drwxr-xr-x  5 abiestro  2018_paris  170 Nov 24 18:57 parse
+drwxr-xr-x  3 abiestro  2018_paris  102 Nov 24 18:57 sorts
+
+.//objs/dir_management:
+total 48
+-rw-r--r--  1 abiestro  2018_paris   760 Nov 24 18:57 add_dir_to_chain.o
+-rw-r--r--  1 abiestro  2018_paris   724 Nov 24 18:57 copy_stat_to_ls_dir.o
+-rw-r--r--  1 abiestro  2018_paris   912 Nov 24 18:57 ft_malloc_ls.o
+-rw-r--r--  1 abiestro  2018_paris  1104 Nov 24 18:57 ft_malloc_ls_dir.o
+-rw-r--r--  1 abiestro  2018_paris  2484 Nov 24 18:57 ft_read_and_save_dir.o
+-rw-r--r--  1 abiestro  2018_paris  1008 Nov 24 18:57 handler.o
+
+.//objs/display:
+total 32
+-rw-r--r--  1 abiestro  2018_paris   824 Nov 24 18:57 display_bad_arguments.o
+-rw-r--r--  1 abiestro  2018_paris  2316 Nov 24 18:57 display_dir.o
+-rw-r--r--  1 abiestro  2018_paris  1160 Nov 24 18:57 display_files.o
+-rw-r--r--  1 abiestro  2018_paris  2768 Nov 24 18:57 display_l.o
+
+.//objs/parse:
+total 8
+drwxr-xr-x  3 abiestro  2018_paris  102 Nov 24 18:57 arguments
+-rw-r--r--  1 abiestro  2018_paris  792 Nov 24 18:57 ft_parse_ls.o
+drwxr-xr-x  5 abiestro  2018_paris  170 Nov 24 18:57 options
+
+.//objs/parse/arguments:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  1224 Nov 24 18:57 ft_ls_parse_arguments.o
+
+.//objs/parse/options:
+total 24
+-rw-r--r--  1 abiestro  2018_paris  1236 Nov 24 18:57 ft_add_option.o
+-rw-r--r--  1 abiestro  2018_paris   964 Nov 24 18:57 ft_parse_options.o
+-rw-r--r--  1 abiestro  2018_paris   200 Nov 24 18:57 set_display_options.o
+
+.//objs/sorts:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  1292 Nov 24 18:57 ft_insert_inchain_list.o
+
+.//srcs:
+total 16
+drwxr-xr-x  8 abiestro  2018_paris   272 Nov 20 14:14 dir_management
+drwxr-xr-x  6 abiestro  2018_paris   204 Nov  9 17:41 display
+-rw-r--r--  1 abiestro  2018_paris  1273 Nov 24 18:29 ft_ls.c
+-rw-r--r--  1 abiestro  2018_paris  1058 Nov  7 14:26 main.c
+drwxr-xr-x  5 abiestro  2018_paris   170 Nov  7 20:39 parse
+drwxr-xr-x  3 abiestro  2018_paris   102 Nov 24 18:43 sorts
+
+.//srcs/dir_management:
+total 48
+-rw-r--r--  1 abiestro  2018_paris  1259 Nov  7 17:24 add_dir_to_chain.c
+-rw-r--r--  1 abiestro  2018_paris  1130 Nov  7 18:45 copy_stat_to_ls_dir.c
+-rw-r--r--  1 abiestro  2018_paris  1177 Nov 24 17:38 ft_malloc_ls.c
+-rw-r--r--  1 abiestro  2018_paris  1442 Nov 24 18:23 ft_malloc_ls_dir.c
+-rw-r--r--  1 abiestro  2018_paris  2882 Nov 24 17:35 ft_read_and_save_dir.c
+-rw-r--r--  1 abiestro  2018_paris  1377 Nov 24 17:51 handler.c
+
+.//srcs/display:
+total 32
+-rw-r--r--  1 abiestro  2018_paris  1063 Nov 24 17:17 display_bad_arguments.c
+-rw-r--r--  1 abiestro  2018_paris  2619 Nov 24 18:26 display_dir.c
+-rw-r--r--  1 abiestro  2018_paris  1332 Nov 24 17:02 display_files.c
+-rw-r--r--  1 abiestro  2018_paris  2694 Nov 24 15:19 display_l.c
+
+.//srcs/parse:
+total 8
+drwxr-xr-x  3 abiestro  2018_paris   102 Nov 24 18:39 arguments
+-rw-r--r--  1 abiestro  2018_paris  1095 Nov 10 18:38 ft_parse_ls.c
+drwxr-xr-x  5 abiestro  2018_paris   170 Nov 24 18:40 options
+
+.//srcs/parse/arguments:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  1596 Nov 24 18:45 ft_ls_parse_arguments.c
+
+.//srcs/parse/options:
+total 24
+-rw-r--r--  1 abiestro  2018_paris  1463 Nov 24 18:40 ft_add_option.c
+-rw-r--r--  1 abiestro  2018_paris  1142 Nov 24 18:39 ft_parse_options.c
+-rw-r--r--  1 abiestro  2018_paris  1182 Nov 10 18:01 set_display_options.c
+
+.//srcs/sorts:
+total 8
+-rw-r--r--  1 abiestro  2018_paris  1694 Nov 24 18:43 ft_insert_inchain_list.c

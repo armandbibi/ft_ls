@@ -56,7 +56,6 @@ SRCS			+=	$(DIR_PARSE)ft_parse_ls.c \
 					$(DIR_PARSE_ARGS)ft_ls_parse_arguments.c \
 					$(DIR_PARSE_OPTS)ft_parse_options.c \
 					$(DIR_PARSE_OPTS)ft_add_option.c \
-					$(DIR_PARSE_OPTS)set_display_options.c
 					
 # MALLOCS
 
@@ -96,7 +95,7 @@ INCLUDE			:= -I $(LIB_FT_DIR) -I $(LIB_PF_DIR)/$(INC_DIR) -I $(INC_DIR)
 all: $(LIB_DIR) $(NAME)
 
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) | $(LIB_DIR) 
 	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(PRINTF) $(INCLUDE)
 	@echo "$(LOG_GREEN)FT_LS has been created successfully !$(LOG_NOCOLOR)"
 
@@ -124,7 +123,7 @@ clean:
 	@$(MK_C) $(LIB_FT_DIR)
 	@$(MK_C) $(LIB_PF_DIR)
 	@$(RM) $(OBJ_DIR)
-	@echo "$(LOG_RED)Delete all Objects files ! $(LOG_NOCOLOR)"
+#	@echo "$(LOG_RED)Delete all Objects files ! $(LOG_NOCOLOR)"
 
 fclean: clean
 	@$(MK_FC) $(LIB_FT_DIR)

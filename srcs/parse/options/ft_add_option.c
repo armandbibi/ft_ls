@@ -6,13 +6,13 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 20:47:47 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/24 18:40:11 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 19:29:49 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-int     option_is_valid(t_ls *ls, char option)
+int		option_is_valid(t_ls *ls, char option)
 {
 	if (option == 'R')
 		ls->option |= OPTION_R;
@@ -29,7 +29,7 @@ int     option_is_valid(t_ls *ls, char option)
 	return (1);
 }
 
-int     ft_add_option(t_ls *ls, char *str)
+int		ft_add_option(t_ls *ls, char *str)
 {
 	int i;
 

@@ -6,13 +6,13 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 20:29:44 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/24 18:39:02 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 19:33:49 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-int ft_parse_option(t_ls *ls, int ac, char **av)
+int		ft_parse_option(t_ls *ls, int ac, char **av)
 {
 	int i;
 
