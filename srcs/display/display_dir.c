@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:15:42 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/22 17:23:12 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 15:11:58 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,16 @@ void        ft_display_dir(t_ls *ls, t_ls_dir *current_dir)
         returned = lstat(ft_add_pass_to_name(NULL, current_dir->name, i->d_name), &info);
         new = ft_new_ls_dir(ft_add_pass_to_name(NULL, current_dir->name, i->d_name), 0);
         ft_copy_stat_info_to_ls_dir(new, &info);
-        if (ls->option & OPTION_l)
+        ft_insert_inchain_list(&ls->elements, new, test_fn);
+    }
+    while ((new = ls->elements))
+    {
+          if (ls->option & OPTION_l)
             display_l(new);
         else
-           ft_printf("%s ", i->d_name);
+           ft_printf("%s ", new->name);
+           ls->elements = ls->elements->next;
+
     }
     ft_printf("\n");
 }

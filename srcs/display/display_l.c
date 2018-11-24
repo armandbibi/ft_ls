@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:25:23 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/20 15:12:10 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 15:19:51 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,27 +20,27 @@ static void ft_set_month(char *buff, int month)
     month++; 
     if (month == 1)
         ft_strcpy(buff, "Jan");
-    if (month == 2)
+    else if (month == 2)
         ft_strcpy(buff, "Feb");
-    if (month == 3)
+    else if (month == 3)
         ft_strcpy(buff, "Mar");
-    if (month == 4)
+    else if (month == 4)
         ft_strcpy(buff, "Apr");
-    if (month == 5)
+    else if (month == 5)
         ft_strcpy(buff, "May");
-    if (month == 6)
+    else if (month == 6)
         ft_strcpy(buff, "Jun");
-    if (month == 7)
+    else if (month == 7)
         ft_strcpy(buff, "Jul");
-    if (month == 8)
+    else if (month == 8)
         ft_strcpy(buff, "Aug");
-    if (month == 9)
+    else if (month == 9)
         ft_strcpy(buff, "Sep");
-    if (month == 10)
+    else if (month == 10)
         ft_strcpy(buff, "Oct");
-    if (month == 11)
+    else if (month == 11)
         ft_strcpy(buff, "Nov");
-    if (month == 12)
+    else if (month == 12)
         ft_strcpy(buff, "Dec");
 }
 

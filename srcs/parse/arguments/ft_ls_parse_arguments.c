@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:22:08 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/20 13:44:59 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 16:00:58 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ t_ls  *ft_ls_parse_arguments(t_ls *ls, int ac, char **av)
         else if (!(S_ISDIR(info.st_mode)))
         {
             element->type = LS_FILE;
-            element->valid = 1;
             ft_copy_stat_info_to_ls_dir(element, &info);
             ft_insert_inchain_list(&ls->elements, element, test_fn);
         }

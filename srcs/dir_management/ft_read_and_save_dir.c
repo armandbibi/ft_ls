@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:03:57 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/22 17:27:41 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/22 19:03:57 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,11 @@ int     ft_read_and_save_dir(t_ls *ls, t_ls_dir *current_dir)
         returned = lstat(ft_add_pass_to_name(NULL, current_dir->name, i->d_name), &info);
         new = ft_new_ls_dir(ft_add_pass_to_name(NULL, current_dir->name, i->d_name), 0);
         ft_copy_stat_info_to_ls_dir(new, &info);
+        new->level = current_dir->level + 1;
         if (returned)
             return (1);
+        if(S_ISLNK(new->stats.st_mode))
+            continue;
         if (ls->option & OPTION_l)
             display_l(new);
         else
@@ -68,12 +71,12 @@ int     ft_read_and_save_dir(t_ls *ls, t_ls_dir *current_dir)
             new->type = BAD_ELEMENT;
             ft_insert_inchain_list(&ls->elements, new, test_fn);
         }
-        else if (!(S_ISDIR(info.st_mode)))
-        {
-            new->type = LS_FILE;
-            new->valid = 1;
-            ft_insert_inchain_list(&ls->elements, new, test_fn);
-        }
+        // else if (!(S_ISDIR(info.st_mode)))
+        // {
+        //     new->type = LS_FILE;
+        //     new->valid = 1;
+        //     ft_insert_inchain_list(&ls->elements, new, test_fn);
+        // }
         else
         {
             new->type = LS_DIR;

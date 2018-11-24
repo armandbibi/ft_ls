@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 16:38:09 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/22 18:00:57 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/24 16:04:17 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,10 @@ t_ls_dir    *ft_new_ls_dir(char *name, char type)
     new->next = NULL;
     new->level = 0; 
     return (new);
+}
+
+void       ft_del_ls_dir(t_ls_dir *del)
+{
+    free(del->name);
+    free(del);
 }
