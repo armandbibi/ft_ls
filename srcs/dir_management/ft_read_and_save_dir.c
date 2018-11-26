@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:03:57 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/26 14:40:26 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/26 15:03:38 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,12 @@ int					ft_read_and_save_dir(t_ls *ls, t_ls_dir *current_dir)
 		{
 			new->valid = 0;
 			new->type = BAD_ELEMENT;
-			ft_insert_inchain_list(&ls->elements, new, test_fn);
+			ft_insert_inchain_list(ls, &ls->elements, new, test_fn);
 		}
 		else
 		{
 			new->type = LS_DIR;
-			ft_insert_inchain_list(&ls->elements, new, test_fn);            
+			ft_insert_inchain_list(ls, &ls->elements, new, test_fn);            
 		}
 	}
 	closedir(dir);

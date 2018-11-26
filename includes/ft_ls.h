@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:24:06 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/24 17:46:36 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/26 15:02:37 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int         ft_ls_manage_not_dir(t_ls *ls, char *str);
 int         ft_parse_option(t_ls *ls, int ac, char **av);
 int         ft_add_option(t_ls *ls, char *str);
 void        ft_set_display_option(t_ls *ls, char option);
-void        ft_insert_inchain_list(t_ls_dir **chain, t_ls_dir *element, int (*compare)(t_ls_dir*, t_ls_dir*));
+void        ft_insert_inchain_list(t_ls *ls, t_ls_dir **chain, t_ls_dir *element, int (*compare)(t_ls*, t_ls_dir*, t_ls_dir*));
 
 
 
@@ -70,7 +70,7 @@ void    display_l(t_ls_dir *element);
 ** sorting
 */
 
-int test_fn(t_ls_dir *a, t_ls_dir *b);
+int test_fn(t_ls *ls,t_ls_dir *a, t_ls_dir *b);
 
 /*
 ** free

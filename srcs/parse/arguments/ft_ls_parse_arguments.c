@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:22:08 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/24 19:33:26 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/26 15:03:06 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ t_ls	*ft_ls_parse_arguments(t_ls *ls, int ac, char **av)
 			element->type = LS_FILE;
 		else if (!returned && (S_ISDIR(info.st_mode)))
 			element->type = LS_DIR;
-		ft_insert_inchain_list(&ls->elements, element, test_fn);
+		ft_insert_inchain_list(ls, &ls->elements, element, test_fn);
 		i++;
 	}
 	return (ls);
