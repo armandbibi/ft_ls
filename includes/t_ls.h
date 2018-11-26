@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:40:15 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/24 17:43:06 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/26 14:14:43 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # define OPTION_a           0b00100
 # define OPTION_r           0b01000
 # define OPTION_t           0b10000
+# define LOOOONG_SPACE      "                                                 "
 
 
 #include <sys/types.h>
@@ -33,6 +34,7 @@ typedef struct  s_ls_dir t_ls_dir;
 struct          s_ls_dir
 {
     char        *name;
+    char        *d_name;
     int         valid;
     char        type;
     t_ls_dir    *next;
@@ -44,11 +46,9 @@ struct          s_ls_dir
 
 struct             s_ls
 {
-    t_ls_dir        *dir_lst;
     t_ls_dir        *elements;
-    t_ls_dir        *files_lst;
-    t_ls_dir        *bad_arguments;
     int             level;
+    int             term_width;
     int             option;
 };
 

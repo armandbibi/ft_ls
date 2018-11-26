@@ -6,12 +6,12 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 16:50:31 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/24 20:30:03 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/26 14:14:09 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
-
+/*
 int	ft_add_dir_to_chain(t_ls *ls, t_ls_dir *chain,
 		t_ls_dir *element, int code)
 {
@@ -26,3 +26,4 @@ int	ft_add_dir_to_chain(t_ls *ls, t_ls_dir *chain,
 	element->next = chain;
 	return (1);
 }
+*/
