@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:40:15 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/26 14:14:43 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/27 20:24:11 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ struct          s_ls_dir
     t_ls_dir    *next;
     t_ls_dir    *kids_dir;
     int         level;
+    int         arg;
     struct stat stats;
 
 };
