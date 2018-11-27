@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 18:16:16 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/27 20:25:44 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/27 20:51:44 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int		test_fn(t_ls *ls, t_ls_dir *a, t_ls_dir *b)
 		return (0);
 	if (a->level > b->level)
 		return (0);
-	if ((a->type < b->type))
-		return (1);
+	if ((a->type > b->type))
+		return (0);
 	// if (a->stats.st_mtimespec.tv_sec < b->stats.st_mtimespec.tv_sec)
 		// return (0);
 	while (a->name[i] && b->name[i] && a->name[i] == b->name[i])
