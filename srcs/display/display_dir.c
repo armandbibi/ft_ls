@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:15:42 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/26 16:33:05 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/27 16:32:02 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ static t_ls_dir		*ft_read_next_entry(char *pass, char *name)
 	t_ls_dir		*new_dir;
 	char			*new_pass;
 	struct stat		info;
+	
 
 	new_pass = NULL;
 	new_dir = NULL;
@@ -49,19 +50,18 @@ static t_ls_dir		*ft_read_next_entry(char *pass, char *name)
 		return (NULL);
 	if (!(new_dir = ft_new_ls_dir(new_pass, 0)))
 		return (NULL);
-	new_dir->d_name = ft_strdup(name);
+	if (!(new_dir->d_name = ft_strdup(name)))
+		return (NULL);
 	if (lstat(new_pass, &info))
-	{
-		ft_del_ls_dir(&new_dir);
-		return NULL;
-	}
-	ft_copy_stat_info_to_ls_dir(new_dir, &info);
+		new_dir->valid = errno;
+	else
+		ft_copy_stat_info_to_ls_dir(new_dir, &info);
 	return (new_dir);
 }
 
 int calc_nbr_element_in_a_row(int colums, int definite_size)
 {
-	return (colums / (definite_size + 3));
+	return (colums / (definite_size));
 }
 
 void				ft_display_dir(t_ls *ls, t_ls_dir *current_dir)
@@ -75,13 +75,15 @@ void				ft_display_dir(t_ls *ls, t_ls_dir *current_dir)
 	t_ls_dir		*saved;
 
 	new_pass = NULL;
-	max_size = 0;
+	max_size = 1;
 	saved = NULL;
 	new = NULL;
 	dir = opendir(current_dir->name);
 	if (!dir)
 		return;
-	ft_printf("\n%s :\n", current_dir->name);
+	ft_printf("%s :\n", current_dir->name);
+	if (current_dir->valid)
+		ft_printf("coucou ./ft_ls : %s : %s\n", current_dir->name, strerror(current_dir->valid));
 	while ((i = readdir(dir)))
 	{
 		if (ft_strequ(i->d_name,".") || ft_strequ(i->d_name,"..") || ft_strstr(i->d_name, "/.") || *i->d_name == '.')
@@ -106,9 +108,9 @@ void				ft_display_dir(t_ls *ls, t_ls_dir *current_dir)
 		else
 		{
 			ft_display_files(ls, new);
-			write(1, LOOOONG_SPACE, max_size - ft_strlen(new->d_name) + 3);
+			write(1, LOOOONG_SPACE, max_size - ft_strlen(new->d_name));
 		}
-		if (!(k % nbr_elem))
+		if (!(OPTION_l & ls->option) && !(k % nbr_elem - 1))
 			ft_printf(("\n"));
 		if (ls->option & OPTION_R && (S_ISDIR(new->stats.st_mode)) && !S_ISLNK(new->stats.st_mode))
 			ft_insert_inchain_list(ls, &ls->elements, new, test_fn);
@@ -116,5 +118,6 @@ void				ft_display_dir(t_ls *ls, t_ls_dir *current_dir)
 			ft_del_ls_dir(&new);
 		k++;
 	}
-	ft_printf("\n");
+	if (max_size != 1)
+		ft_printf("\n");
 }

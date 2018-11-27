@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:24:06 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/26 15:02:37 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/27 15:50:57 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ int         ft_copy_stat_info_to_ls_dir(t_ls_dir *element, struct stat *info);
 void        ft_display_bad_arguments(t_ls *ls, t_ls_dir *chain);
 void        ft_display_files(t_ls *ls, t_ls_dir *chain);
 void        ft_display_dir(t_ls *ls, t_ls_dir *chain);
+void	ft_add_color(t_ls_dir *element);
+
 
 /*
 ** display optionsa

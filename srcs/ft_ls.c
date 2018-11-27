@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:22:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/26 14:31:51 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/26 16:42:56 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int	ft_ls(int ac, char **arguments)
 	{
 		ls->elements = ls->elements->next;
 		ft_handler(ls, element);
+		if (ls->elements && S_ISDIR(ls->elements->stats.st_mode))
+			ft_printf("\n");
 	}
 	ft_del_ls(ls);
 	return (0);
