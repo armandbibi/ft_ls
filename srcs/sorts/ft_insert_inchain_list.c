@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 18:16:16 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/28 20:48:31 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/28 20:50:02 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int		test_fn(t_ls *ls, t_ls_dir *a, t_ls_dir *b)
 	int i = 0;
 	// if (a->arg != b->arg)
 	// 	return (0);
-	 if (a->type > b->type)
-	 	return(0);
-	else
+	if (a->type > b->type)
+		return(0);
+	if (a->type < b->type)
 		return(1);
 	while (a->name[i] && b->name[i] && a->name[i] == b->name[i])
 		i++;
