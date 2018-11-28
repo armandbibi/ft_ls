@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:15:42 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/27 20:53:39 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/28 16:26:10 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ void				ft_display_dir(t_ls *ls, t_ls_dir *current_dir)
 	max_size = 1;
 	saved = NULL;
 	new = NULL;
-	current_dir->arg = ls->nb++;
 	dir = opendir(current_dir->name);
 	ft_printf("%s :\n", current_dir->name);
 	if (!dir)
@@ -87,13 +86,13 @@ void				ft_display_dir(t_ls *ls, t_ls_dir *current_dir)
 	}
 	while ((i = readdir(dir)))
 	{
-		// if (ft_strequ(i->d_name,".") || ft_strequ(i->d_name,"..") || ft_strstr(i->d_name, "/.") || *i->d_name == '.')
-		// 	continue;
+		if (ft_strequ(i->d_name,".") || ft_strequ(i->d_name,"..") || ft_strstr(i->d_name, "/.") || *i->d_name == '.')
+			continue;
 		if ((new = ft_read_next_entry(current_dir->name, i->d_name)))
 		{
 			new->level = current_dir->level + 1;
 			new->type = LS_DIR;
-			new->arg = current_dir->arg;
+			new->arg = current_dir->arg + 1;
 			max_size = (ft_strlen(new->d_name) > max_size) ? ft_strlen(new->d_name) : max_size;
 			ft_insert_inchain_list(ls, &saved, new, test_fn);
 		}

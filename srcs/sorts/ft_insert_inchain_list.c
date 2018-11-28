@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 18:16:16 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/27 20:51:44 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/28 19:08:56 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,13 @@
 
 int		test_fn(t_ls *ls, t_ls_dir *a, t_ls_dir *b)
 {
-	int i;
+(void)ls;
 
-	(void)ls;
-	i = 0;
-	if (a->arg != b->arg)
+	if (a->type > b->type)
+		return(0);
+	if (ft_strcmp(a->name, b->name) > 0)
 		return (0);
-	if (a->level > b->level)
-		return (0);
-	if ((a->type > b->type))
-		return (0);
-	// if (a->stats.st_mtimespec.tv_sec < b->stats.st_mtimespec.tv_sec)
-		// return (0);
-	while (a->name[i] && b->name[i] && a->name[i] == b->name[i])
-		i++;
-	if (ft_strcmp(a->name, b->name) < 0)
-		return (1);
-	return (0);
+	return (1);
 }
 
 void	ft_insert_inchain_list(t_ls *ls, t_ls_dir **chain, t_ls_dir *element,
@@ -40,21 +30,40 @@ void	ft_insert_inchain_list(t_ls *ls, t_ls_dir **chain, t_ls_dir *element,
 {
 	t_ls_dir *i;
 
+	element->next = NULL;
 	compare = test_fn;
 	i = *chain;
+
+
+
+
 	if (!chain || !i)
 	{
 		*chain = element;
 		return ;
 	}
-	else if (!(compare(ls, *chain, element)))
+	if (compare(ls, *chain, element))
 	{
 		element->next = *chain;
 		*chain = element;
-		return ;
+		return;
 	}
-	while (i->next && compare(ls, i->next, element))
+	t_ls_dir *j = i;
+	while ((i))
+	{
+		j = i;
 		i = i->next;
-	element->next = i->next;
-	i->next = element;
+		if (i && compare(ls, i, element))
+		{
+			if (i->next)
+			element->next = i;
+			j->next = element;
+			return;
+		}
+		if (!i)
+		{
+			j->next = element;
+			return;
+		}
+	}
 }

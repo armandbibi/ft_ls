@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:22:08 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/27 20:52:02 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/28 15:03:11 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,8 @@ t_ls	*ft_ls_parse_arguments(t_ls *ls, int ac, char **av)
 		i++;
 	}
 	element = ls->elements;
-	element->arg = 0;
+	element->arg = ls->nb++;
 	while((element = element->next))
-	{
-		element->arg = i;
-		i++;
-	}
+		element->arg = ls->nb++;
 	return (ls);
 }

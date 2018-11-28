@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:12:27 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/27 15:56:38 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/27 21:01:45 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	ft_add_color(t_ls_dir *element)
 void		ft_display_files(t_ls *ls, t_ls_dir *chain)
 {
 	(void)ls;
-	if (*chain->d_name == '.')
-		return ;
+	// if (*chain->d_name == '.')
+	// 	return ;
 	ft_add_color(chain);
 	if (ls->option & OPTION_l)
 		display_l(chain);
