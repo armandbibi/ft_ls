@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 20:47:47 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/24 19:29:49 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/28 19:26:36 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int		ft_add_option(t_ls *ls, char *str)
 	{
 		if (!option_is_valid(ls, *str))
 		{
-			ft_printf("invalide option : '%c' in\n");
+			ft_printf("invalide option : '%c' in");
 			return (0);
 		}
 		str++;

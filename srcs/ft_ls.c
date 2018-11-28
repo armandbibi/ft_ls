@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:22:55 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/27 20:28:02 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/28 19:27:21 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	ft_ls(int ac, char **arguments)
 		return (0);
 	ls->term_width = w.ws_col;
 	ls = ft_parse_ls(ac, arguments, ls);
+	if (!ls)
+		return (0);
 	while ((element = ls->elements))
 	{
 		ls->elements = ls->elements->next;
