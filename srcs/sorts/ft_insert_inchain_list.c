@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 18:16:16 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/28 20:50:02 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/28 21:01:42 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int		test_fn(t_ls *ls, t_ls_dir *a, t_ls_dir *b)
 (void)ls;
 
 	int i = 0;
-	// if (a->arg != b->arg)
-	// 	return (0);
+	if (a->level < b->level)
+		return (0);
 	if (a->type > b->type)
 		return(0);
 	if (a->type < b->type)
@@ -41,13 +41,13 @@ void	ft_insert_inchain_list(t_ls *ls, t_ls_dir **chain, t_ls_dir *element,
 	compare = test_fn;
 	i = *chain;
 
-	ft_printf("\nm--------\n");
-	while (i)
-	{
-		ft_printf(" %s(%d) ->", i->name, i->type);
-		i = i->next;
-	}
-	ft_printf("\n--------\n");
+	// ft_printf("\nm--------\n");
+	// while (i)
+	// {
+	// 	ft_printf(" %s(%d) ->", i->name, i->type);
+	// 	i = i->next;
+	// }
+	// ft_printf("\n--------\n");
 	i = *chain;
 
 	if (!chain || !i)
