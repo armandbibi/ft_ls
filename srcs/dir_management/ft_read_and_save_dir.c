@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:03:57 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/26 15:03:38 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/02 17:04:24 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,69 +14,104 @@
 #include "libft.h"
 #include <sys/types.h>
 #include <dirent.h>
+#include "errno.h"
 
-static char			*ft_add_pass_to_name(t_ls_dir *element, char *pass, char *current)
+int					ft_handle_hidden(t_ls *ls, t_ls_dir *element, int max_size)
 {
-	char *new_pass;
-
-	new_pass = NULL;
-	if (!current || !pass || !*current || !*pass )
-		return (NULL);
-	if (!(new_pass = malloc(sizeof(char) * (ft_strlen(pass) + ft_strlen(current) + 2))))
-		return (NULL);
-	ft_strcpy(new_pass, pass);
-	ft_strcat(new_pass, "/");
-	ft_strcat(new_pass, current);
-	if (element)
-		element->name = new_pass;
-	return (new_pass);
+	if (!(OPTION_a & ls->option) && *element->d_name == '.')
+	{
+		return (1);
+	}
+	if (ft_strequ(element->d_name, ".") || ft_strequ(element->d_name, ".."))
+	{
+		if (ls->option & OPTION_l)
+			display_l(element);
+		else
+		{
+			ft_display_files(ls, element);
+			write(1, LOOOONG_SPACE, max_size - ft_strlen(element->d_name));
+		}
+		return (1);
+	}
+	return (0);
 }
 
-int					ft_read_and_save_dir(t_ls *ls, t_ls_dir *current_dir)
+t_ls_dir			*ft_read_dir(t_ls *ls,
+		t_ls_dir *current_dir, size_t *max_size)
 {
-	DIR             *dir;
-	struct dirent   *i;
-	struct stat     info;
-	int             returned;
-	t_ls_dir        *new;
-	char            *new_str;
+	DIR				*dir;
+	struct dirent	*i;
+	t_ls_dir		*new;
+	t_ls_dir		*saved;
 
-	dir = opendir(current_dir->name);
-	if (!dir)
-		return (0);
-	ft_printf("\n%s :\n", current_dir->name);
+	saved = NULL;
+	if (ls->arg_count > 1 || current_dir->level > 0)
+		ft_printf("%s :\n", current_dir->name);
+	if (!(dir = opendir(current_dir->name)))
+	{
+		ft_printf("ft_ls : %s : %s\n", current_dir->name, strerror(errno));
+		return (NULL);
+	}
 	while ((i = readdir(dir)))
 	{
-		if (ft_strequ(i->d_name,".") || ft_strequ(i->d_name,"..") || ft_strstr(i->d_name, "/.") || *i->d_name == '.')
-			continue;
-		new_str = ft_add_pass_to_name(NULL, current_dir->name, i->d_name); 
-		if (!new_str)
-			continue;
-		returned = lstat((new_str), &info);
-		new = ft_new_ls_dir(new_str, 0);
-		ft_copy_stat_info_to_ls_dir(new, &info);
-		new->level = current_dir->level + 1;
-		if (returned)
-			return (1);
-		if(S_ISLNK(new->stats.st_mode))
-			continue;
-		if (ls->option & OPTION_l)
-			display_l(new);
-		else
-			ft_printf("%s ", i->d_name);
-		if (returned)
+		if ((new = ft_read_next_entry(current_dir->name, i->d_name)))
 		{
-			new->valid = 0;
-			new->type = BAD_ELEMENT;
-			ft_insert_inchain_list(ls, &ls->elements, new, test_fn);
-		}
-		else
-		{
-			new->type = LS_DIR;
-			ft_insert_inchain_list(ls, &ls->elements, new, test_fn);            
+			more_info_ls_dir(new, current_dir->level, 3, current_dir->arg);
+			*max_size = (ft_strlen(new->d_name) > *max_size) ?
+				ft_strlen(new->d_name) : *max_size;
+			ft_insert_inchain_list(ls, &saved, new, test_fn);
 		}
 	}
 	closedir(dir);
-	ft_printf("\n");
-	return (1);
+	return (saved);
+}
+
+void				ft_handle_dir(t_ls *ls,
+		t_ls_dir *new, int max_size, int modulo)
+{
+	if (ft_handle_hidden(ls, new, max_size))
+	{
+		ft_del_ls_dir(&new);
+		return ;
+	}
+	if (ls->option & OPTION_l)
+		display_l(new);
+	else
+	{
+		ft_display_files(ls, new);
+		write(1, LOOOONG_SPACE, max_size - ft_strlen(new->d_name));
+	}
+	if (!(OPTION_l & ls->option) && !(modulo))
+		ft_printf(("\n"));
+	if (ls->option & OPTION_R && (S_ISDIR(new->stats.st_mode))
+			&& !S_ISLNK(new->stats.st_mode))
+		ft_insert_inchain_list(ls, &ls->elements, new, test_fn);
+	else
+		ft_del_ls_dir(&new);
+}
+
+void				ft_display_dir(t_ls *ls, t_ls_dir *current_dir)
+{
+	t_ls_dir	*new;
+	size_t		max_size;
+	int			nbr_elem;
+	t_ls_dir	*saved;
+	int			k;
+
+	max_size = 1;
+	saved = NULL;
+	new = NULL;
+	if (!(saved = ft_read_dir(ls, current_dir, &max_size)))
+		return ;
+	nbr_elem = calc_nbr_element_in_a_row(ls->term_width, max_size + 1);
+	k = nbr_elem + 1;
+	while ((new = saved))
+	{
+		saved = saved->next;
+		new->next = NULL;
+		ft_handle_dir(ls, new, max_size, k % nbr_elem);
+		k++;
+	}
+	if (max_size != 1)
+		ft_printf("\n");
 }

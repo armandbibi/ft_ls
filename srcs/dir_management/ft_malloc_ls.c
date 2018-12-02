@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 16:14:36 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/24 20:31:40 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/30 13:41:47 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ t_ls	*malloc_ls(void)
 	new_ls->elements = NULL;
 	new_ls->option = 0;
 	new_ls->level = 0;
+	new_ls->arg_count = 0;
 	return (new_ls);
 }
 

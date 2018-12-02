@@ -64,8 +64,7 @@ SRCS			+=	$(DIR_MANAGE)/ft_malloc_ls.c \
 
 # STRUCT LS_DIR
 
-SRCS			+=	$(DIR_MANAGE)/add_dir_to_chain.c \
-					$(DIR_MANAGE)/copy_stat_to_ls_dir.c \
+SRCS			+=	$(DIR_MANAGE)/copy_stat_to_ls_dir.c \
 					$(DIR_MANAGE)/ft_read_and_save_dir.c \
 					$(DIR_MANAGE)/handler.c \
 

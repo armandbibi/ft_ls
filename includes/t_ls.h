@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:40:15 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/28 19:07:26 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/11/30 13:42:05 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ struct             s_ls
     int             level;
     int             term_width;
     int             option;
+    int             arg_count;
     int             nb;
 };
 
