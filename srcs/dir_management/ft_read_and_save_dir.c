@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:03:57 by abiestro          #+#    #+#             */
-/*   Updated: 2018/12/02 17:04:24 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/08 17:30:41 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 
 int					ft_handle_hidden(t_ls *ls, t_ls_dir *element, int max_size)
 {
-	if (!(OPTION_a & ls->option) && *element->d_name == '.')
+	if (!(OPTION_A & ls->option) && *element->d_name == '.')
 	{
 		return (1);
 	}
 	if (ft_strequ(element->d_name, ".") || ft_strequ(element->d_name, ".."))
 	{
-		if (ls->option & OPTION_l)
+		if (ls->option & OPTION_L)
 			display_l(element);
 		else
 		{
@@ -74,16 +74,16 @@ void				ft_handle_dir(t_ls *ls,
 		ft_del_ls_dir(&new);
 		return ;
 	}
-	if (ls->option & OPTION_l)
+	if (ls->option & OPTION_L)
 		display_l(new);
 	else
 	{
 		ft_display_files(ls, new);
 		write(1, LOOOONG_SPACE, max_size - ft_strlen(new->d_name));
 	}
-	if (!(OPTION_l & ls->option) && !(modulo))
+	if (!(OPTION_L & ls->option) && !(modulo))
 		ft_printf(("\n"));
-	if (ls->option & OPTION_R && (S_ISDIR(new->stats.st_mode))
+	if (ls->option & OPTION_RR && (S_ISDIR(new->stats.st_mode))
 			&& !S_ISLNK(new->stats.st_mode))
 		ft_insert_inchain_list(ls, &ls->elements, new, test_fn);
 	else
@@ -109,7 +109,7 @@ void				ft_display_dir(t_ls *ls, t_ls_dir *current_dir)
 	{
 		saved = saved->next;
 		new->next = NULL;
-		ft_handle_dir(ls, new, max_size, k % nbr_elem);
+		ft_handle_dir(ls, new, max_size, ((nbr_elem) ? k % nbr_elem : 1));
 		k++;
 	}
 	if (max_size != 1)

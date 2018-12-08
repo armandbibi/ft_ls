@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 16:38:09 by abiestro          #+#    #+#             */
-/*   Updated: 2018/12/02 16:24:13 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/08 17:38:47 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ t_ls_dir	*ft_new_ls_dir(char *name, char type)
 	new->d_name = name;
 	new->valid = 0;
 	new->arg = 0;
-	new->prev = NULL;
 	new->next = NULL;
 	ft_memset(&new->stats, 0, sizeof(struct stat));
 	new->level = 0;

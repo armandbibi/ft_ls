@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:12:27 by abiestro          #+#    #+#             */
-/*   Updated: 2018/12/02 16:50:10 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/08 17:14:19 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void				ft_format_time2(struct timespec *time, char *buff, int t)
 		ft_itoa(t, &buff[13], 10);
 	}
 	buff[14] = ':';
-	t = time->tv_sec % 3600 / 60 + 1;
+	t = time->tv_sec % 3600 / 60;
 	if (t > 9)
 		ft_itoa(t, &buff[15], 10);
 	else
@@ -102,12 +102,12 @@ void				ft_add_color(t_ls_dir *element)
 void				ft_display_files(t_ls *ls, t_ls_dir *chain)
 {
 	(void)ls;
-	if (ls->option & OPTION_l)
+	if (ls->option & OPTION_L)
 		display_l(chain);
 	else
 	{
 		ft_add_color(chain);
-		ft_printf("%s", chain->d_name);
+		ft_printf("%s ", chain->d_name);
 		ft_printf("\033[0m ");
 	}
 }

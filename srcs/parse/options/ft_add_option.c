@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 20:47:47 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/28 19:26:36 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/02 17:52:06 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 int		option_is_valid(t_ls *ls, char option)
 {
 	if (option == 'R')
-		ls->option |= OPTION_R;
+		ls->option |= OPTION_RR;
 	else if (option == 'l')
-		ls->option |= OPTION_l;
+		ls->option |= OPTION_L;
 	else if (option == 'a')
-		ls->option |= OPTION_a;
+		ls->option |= OPTION_A;
 	else if (option == 'r')
-		ls->option |= OPTION_r;
+		ls->option |= OPTION_R;
 	else if (option == 't')
-		ls->option |= OPTION_t;
+		ls->option |= OPTION_T;
 	else
 		return (0);
 	return (1);

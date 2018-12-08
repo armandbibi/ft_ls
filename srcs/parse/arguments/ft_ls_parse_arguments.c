@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:22:08 by abiestro          #+#    #+#             */
-/*   Updated: 2018/12/02 16:49:21 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/08 16:29:43 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,13 @@ t_ls		*ft_ls_parse_arguments(t_ls *ls, int ac, char **av)
 	i = 1;
 	while (i < ac && *av[i] == '-')
 		i++;
-	if (i == ac && i--)
-		av[i] = ft_strdup("./");
+	if (i == ac && i-- && !(av[i] = ft_strdup("./")))
+			return (ls);
 	while (i < ac)
 	{
 		returned = lstat(av[i], &info);
-		element = ft_new_ls_dir(ft_strdup(av[i]), 0);
+		if (!(element = ft_new_ls_dir(ft_strdup(av[i]), 0)))
+			return (NULL);
 		manage_element(element, returned, info);
 		ft_insert_inchain_list(ls, &ls->elements, element, test_fn);
 		i++;
