@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:25:23 by abiestro          #+#    #+#             */
-/*   Updated: 2018/12/02 16:44:16 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/08 19:48:28 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,23 +80,22 @@ static void			print_l(t_ls_dir *element, char *time, char *perms)
 			(element->stats.st_gid) ?
 			getgrgid(element->stats.st_gid)->gr_name : "wheel",
 			element->stats.st_size,
-			(*time) ? &time[5] : "");
+			(*time) ? &time[4] : "");
 }
 
 void				display_l(t_ls_dir *element)
 {
-	char time[40];
+	char timie[80];
 	char perms[12];
 	char dest[800];
 
-	ft_memset(time, ' ', 39);
 	ft_memset(perms, '-', sizeof(char) * 11);
-	time[39] = 0;
+	ft_memset(timie, 0, 50);
+	ft_strncpy(timie, ctime(&element->stats.st_mtimespec.tv_sec), 16);
 	perms[11] = 0;
 	if (!element)
 		return ;
-	ft_format_time(&element->stats.st_mtimespec, time);
-	print_l(element, time, perms);
+	print_l(element, timie, perms);
 	ft_add_color(element);
 	ft_printf("%s \033[0m ", element->d_name);
 	if (S_ISLNK(element->stats.st_mode))

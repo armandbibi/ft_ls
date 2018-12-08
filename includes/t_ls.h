@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:40:15 by abiestro          #+#    #+#             */
-/*   Updated: 2018/12/08 17:37:28 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/08 20:18:17 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # define OPTION_A           0b00100
 # define OPTION_R			0b01000
 # define OPTION_T           0b10000
-# define LOOOONG_SPACE      "                                                                                                                                                                                                                                "
+# define LOOOONG_SPACE      "                                                 "
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <unistd.h>

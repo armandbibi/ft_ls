@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:22:08 by abiestro          #+#    #+#             */
-/*   Updated: 2018/12/08 16:29:43 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/08 19:51:19 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ t_ls		*ft_ls_parse_arguments(t_ls *ls, int ac, char **av)
 	while (i < ac && *av[i] == '-')
 		i++;
 	if (i == ac && i-- && !(av[i] = ft_strdup("./")))
-			return (ls);
+		return (ls);
 	while (i < ac)
 	{
 		returned = lstat(av[i], &info);

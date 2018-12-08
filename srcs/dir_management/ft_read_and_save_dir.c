@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:03:57 by abiestro          #+#    #+#             */
-/*   Updated: 2018/12/08 17:30:41 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/08 20:41:57 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,16 @@ void				ft_handle_dir(t_ls *ls,
 	else
 	{
 		ft_display_files(ls, new);
-		write(1, LOOOONG_SPACE, max_size - ft_strlen(new->d_name));
+		if (!(OPTION_L & ls->option) && !(modulo))
+			ft_printf(("\n"));
+		else
+		{
+			while ((max_size -= 35) > 0 ||
+					max_size > (int)ft_strlen(new->d_name) || max_size > 35)
+				write(1, LOOOONG_SPACE, 35);
+			write(1, LOOOONG_SPACE, max_size);
+		}
 	}
-	if (!(OPTION_L & ls->option) && !(modulo))
-		ft_printf(("\n"));
 	if (ls->option & OPTION_RR && (S_ISDIR(new->stats.st_mode))
 			&& !S_ISLNK(new->stats.st_mode))
 		ft_insert_inchain_list(ls, &ls->elements, new, test_fn);
@@ -103,7 +109,8 @@ void				ft_display_dir(t_ls *ls, t_ls_dir *current_dir)
 	new = NULL;
 	if (!(saved = ft_read_dir(ls, current_dir, &max_size)))
 		return ;
-	nbr_elem = calc_nbr_element_in_a_row(ls->term_width, max_size + 1);
+	nbr_elem = calc_nbr_element_in_a_row(ls->term_width,
+		((max_size < (size_t)ls->term_width) ? max_size + 1 : ls->term_width));
 	k = nbr_elem + 1;
 	while ((new = saved))
 	{

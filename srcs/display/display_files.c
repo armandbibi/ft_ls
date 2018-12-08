@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:12:27 by abiestro          #+#    #+#             */
-/*   Updated: 2018/12/08 17:14:19 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/08 19:19:23 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void				ft_format_time(struct timespec *time, char *buff)
 		ft_set_month(&buff[6], t);
 	}
 	buff[8] = ' ';
-	t = time->tv_sec % 2629746 / 86400 + 1;
+	t = time->tv_sec % 2629746 / 86400;
 	if (t > 9)
 		ft_itoa(t, &buff[9], 10);
 	else
@@ -85,7 +85,7 @@ void				ft_format_time(struct timespec *time, char *buff)
 		ft_itoa(t, &buff[10], 10);
 	}
 	buff[11] = ' ';
-	t = time->tv_sec % 86400 / 3600 + 1;
+	t = time->tv_sec % 86400 / 3600;
 	ft_format_time2(time, buff, t);
 }
 
