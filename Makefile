@@ -44,6 +44,11 @@ DIR_MANAGE		:= dir_management
 DIR_DISPLAY		:= display/
 DIR_SORT		:= sorts/
 
+# HEADERS
+HEAD_FILES		:= ft_ls.h \
+	t_ls.h
+HEAD_INC		:=	$(addprefix ./$(INC_DIR)/, $(HEAD_FILES))
+
 # SRCS FOR RUNNING PROJECT CONFORM TO CORRECTION
 SRCS			+=	main.c
 
@@ -94,8 +99,8 @@ INCLUDE			:= -I $(LIB_FT_DIR) -I $(LIB_PF_DIR)/$(INC_DIR) -I $(INC_DIR)
 all: $(LIB_DIR) $(NAME)
 
 
-$(NAME): $(OBJS) | $(LIB_DIR) 
-	@$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(PRINTF) $(INCLUDE)
+$(NAME): $(OBJS) $(HEAD_INC) | $(LIB_DIR) 
+	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBFT) $(PRINTF) $(INCLUDE)
 	@echo "$(LOG_GREEN)FT_LS has been created successfully !$(LOG_NOCOLOR)"
 
 $(LIB_DIR): $(LIBFT_A) $(PRINTF_A)

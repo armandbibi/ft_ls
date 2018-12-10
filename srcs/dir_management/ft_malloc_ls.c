@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 16:14:36 by abiestro          #+#    #+#             */
-/*   Updated: 2018/12/02 17:59:49 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/10 15:17:22 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ t_ls	*malloc_ls(void)
 
 void	ft_del_ls(t_ls *ls)
 {
+	if (ls->blank)
+		free(ls->blank);
 	free(ls);
 }

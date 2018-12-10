@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:22:08 by abiestro          #+#    #+#             */
-/*   Updated: 2018/12/08 19:51:19 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/10 18:45:46 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,16 @@ static void	manage_element(t_ls_dir *element, int returned, struct stat info)
 		element->type = LS_DIR;
 }
 
+static void	ft_add_arg_to_elems(t_ls *ls)
+{
+	t_ls_dir *element;
+
+	element = ls->elements;
+	element->arg = ls->nb++;
+	while ((element = element->next))
+		element->arg = ls->nb++;
+}
+
 t_ls		*ft_ls_parse_arguments(t_ls *ls, int ac, char **av)
 {
 	int			i;
@@ -35,7 +45,9 @@ t_ls		*ft_ls_parse_arguments(t_ls *ls, int ac, char **av)
 	struct stat	info;
 
 	i = 1;
-	while (i < ac && *av[i] == '-')
+	while (i < ac && *av[i] == '-' && !ft_strequ(av[i], "--"))
+		i++;
+	if (ft_strequ(av[i], "--"))
 		i++;
 	if (i == ac && i-- && !(av[i] = ft_strdup("./")))
 		return (ls);
@@ -49,9 +61,6 @@ t_ls		*ft_ls_parse_arguments(t_ls *ls, int ac, char **av)
 		i++;
 		ls->arg_count++;
 	}
-	element = ls->elements;
-	element->arg = ls->nb++;
-	while ((element = element->next))
-		element->arg = ls->nb++;
+	ft_add_arg_to_elems(ls);
 	return (ls);
 }

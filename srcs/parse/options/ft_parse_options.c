@@ -6,7 +6,7 @@
 /*   By: abiestro <abiestro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 20:29:44 by abiestro          #+#    #+#             */
-/*   Updated: 2018/11/28 19:30:57 by abiestro         ###   ########.fr       */
+/*   Updated: 2018/12/10 18:46:05 by abiestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int		ft_parse_option(t_ls *ls, int ac, char **av)
 	i = 1;
 	while (i < ac && *av[i] == '-')
 	{
+		if (ft_strequ(av[i], "--"))
+			return (1);
 		if (!ft_add_option(ls, av[i]))
 		{
 			ft_printf(" \"%s\"\n", av[i]);
